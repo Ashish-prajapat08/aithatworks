@@ -1,0 +1,206 @@
+
+@import '@fontsource/inter/300.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    @apply antialiased text-gray-900;
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Clash Grotesk', sans-serif;
+    @apply font-bold tracking-tighter;
+    letter-spacing: -0.01em;
+  }
+
+  span {
+    font-family: 'Clash Grotesk', sans-serif;
+    @apply font-bold tracking-tighter;
+    letter-spacing: -0.01em;
+  }
+
+  p {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px !important;
+    @apply font-light leading-relaxed;
+  }
+
+  .nav-link {
+    font-family: 'Inter', sans-serif;
+    @apply font-light;
+  }
+
+  .btn {
+    font-family: 'Inter', sans-serif;
+    @apply font-light;
+  }
+
+  img:not(.logo):not([class*="!border-0"]) {
+    @apply border-2 border-black;
+  }
+
+  /* Enhanced Mobile Optimizations */
+  @media (max-width: 640px) {
+    h1 {
+      @apply text-3xl leading-tight;
+    }
+
+    h2 {
+      @apply text-2xl leading-tight;
+    }
+
+    h3 {
+      @apply text-xl leading-tight;
+    }
+
+    p {
+      @apply text-base leading-relaxed;
+    }
+
+    .container {
+      @apply px-4;
+    }
+
+    /* Improved spacing for mobile */
+    section {
+      @apply py-12;
+    }
+
+    /* Better form elements for mobile */
+    input, select, textarea {
+      @apply text-base py-3;
+    }
+
+    /* Improved button sizing */
+    button, .btn {
+      @apply text-base py-3 px-4;
+    }
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-light rounded-full shadow-sm transition-colors duration-200;
+  }
+
+  .btn-primary {
+    @apply bg-[#ff5ec4] text-white hover:bg-[#ff4bb8];
+  }
+
+  .btn-secondary {
+    @apply bg-white text-[#ff5ec4] border-2 border-[#ff5ec4] hover:bg-[#ff5ec4]/5;
+  }
+
+  /* Enhanced Mobile-first responsive classes */
+  .section-padding {
+    @apply py-12 md:py-24;
+  }
+
+  .grid-cols-responsive {
+    @apply grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8;
+  }
+
+  .text-responsive {
+    @apply text-base md:text-lg lg:text-xl;
+  }
+
+  /* Mobile navigation improvements */
+  .mobile-menu {
+    @apply fixed inset-0 bg-white z-50 overflow-y-auto;
+  }
+
+  .mobile-menu-item {
+    @apply block w-full text-left px-4 py-3 text-lg font-light text-gray-900 hover:bg-gray-50;
+  }
+}
+
+/* Custom animations with reduced motion for mobile */
+@media (prefers-reduced-motion: no-preference) {
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Touch device optimizations */
+@media (hover: none) {
+  .hover\:scale-105 {
+    transform: none !important;
+  }
+
+  /* Improved touch targets */
+  button, 
+  a,
+  input[type="button"],
+  input[type="submit"] {
+    @apply min-h-[44px] min-w-[44px];
+  }
+
+  input,
+  select,
+  textarea {
+    @apply min-h-[44px];
+  }
+
+  /* Remove hover effects on touch devices */
+  .hover\:bg-opacity-90,
+  .hover\:shadow-lg,
+  .hover\:scale-105 {
+    @apply transition-none;
+  }
+}
+
+/* Improved form elements for mobile */
+@media (max-width: 640px) {
+  input,
+  select,
+  textarea {
+    @apply text-base py-3;
+    font-size: 16px !important; /* Prevents iOS zoom on focus */
+  }
+
+  /* Better spacing for stacked elements */
+  .space-y-responsive {
+    @apply space-y-4 md:space-y-6;
+  }
+
+  /* Improved grid layouts */
+  .grid-responsive {
+    @apply grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6;
+  }
+}
+
+/* Safe area insets for modern mobile devices */
+@supports(padding: max(0px)) {
+  .safe-bottom {
+    padding-bottom: max(1.5rem, env(safe-area-inset-bottom));
+  }
+
+  .safe-top {
+    padding-top: max(1.5rem, env(safe-area-inset-top));
+  }
+}
