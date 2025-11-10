@@ -17,7 +17,7 @@ const Newsletter = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
-    setErrorMessage('');
+    setErrorMessage(''); 
 
     if (!formData.consent) {
       setIsLoading(false);

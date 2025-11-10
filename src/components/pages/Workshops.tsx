@@ -133,12 +133,12 @@ const Workshops = () => {
                 </button>
               </div>
               
-              <p>We offer a range of:</p>
+              {/* <p>We offer a range of:</p> */}
               
-              <ul className="space-y-2 text-left list-disc pl-6">
+              {/* <ul className="space-y-2 text-left list-disc pl-6">
                 <li>Online and in-person training options</li>
                 <li>6 and 12 month training programs</li>
-              </ul>
+              </ul> */}
               
               <p>
                 Need more information - get in contact with your questions ➡

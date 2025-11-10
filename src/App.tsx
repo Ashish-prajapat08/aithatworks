@@ -6,7 +6,7 @@ import Hero from './components/home/Hero';
 import Features from './components/Features';
 import Ways from './components/Ways';
 import ConsultancyBanner from './components/ConsultancyBanner';
-import WhyAISection from './components/WhyAISection';
+// import WhyAISection from './components/WhyAISection';
 import Founder from './components/Founder';
 import FAQ from './components/FAQ';
 import Newsletter from './components/Newsletter';
@@ -20,6 +20,8 @@ import PrivacyPolicy from './components/pages/PrivacyPolicy';
 import TermsCondition from './components/pages/TermsCondition';
 import CookiePolicy from './components/pages/CookiePolicy';
 import GenAIKickstart from './components/pages/GenAIKickstart';
+import FreeTools from './components/pages/FreeTools';
+import FreeToolsAccess from './components/pages/FreeToolsAccess';
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -70,9 +72,10 @@ const ScrollToSection = () => {
 const HomePage = () => (
   <>
     <Hero />
+    
     <ConsultancyBanner />
     <Ways />
-    <WhyAISection />
+    {/* <WhyAISection /> */}
     <Features />
     <Founder />
     <FAQ />
@@ -90,6 +93,8 @@ function App() {
         <main>
           <Routes>
             <Route path="/" element={<HomePage />} />
+            <Route path="/free-tools" element={<FreeTools />} /> 
+             <Route path="/free-tools-access" element={<FreeToolsAccess />} /> 
             <Route path="/gen-ai-kickstart" element={<GenAIKickstart />} />
             <Route path="/community" element={<Community />} />
             <Route path="/goodie-bag" element={<Goodiebag />} />

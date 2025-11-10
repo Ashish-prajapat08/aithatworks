@@ -114,7 +114,7 @@ const GenAIKickstart = () => {
               <ul className="space-y-2 text-left list-disc pl-6">
                 <li>Let you know the moment we launch</li>
                 <li>Send you weekly AI tips while you wait</li>
-                <li>Give you first dibs on early-bird pricing</li>
+                <li>Give you first dibs on ea rly-bird pricing</li>
               </ul>
               
               <p className="italic text-[#ff5ec4]">

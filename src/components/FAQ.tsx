@@ -55,6 +55,7 @@ const FAQ = () => {
       question: "What makes your training different?",
       answer: "We keep it real! No complex jargon or theoretical stuff - just practical, actionable training that shows you exactly how to use AI in your day-to-day work. Plus, I've been where you are, so I know exactly how to make AI click for non-technical people."
     },
+    
     {
       question: "Which program is right for me?",
       answer: "If you want to power up your whole team, our Workshops are perfect. For personal learning, start with our Gen AI Kickstart Course. Not sure? Reach out via our contact page and I'll help you figure out the best path for your needs."
@@ -95,6 +96,36 @@ const FAQ = () => {
     {
       question: "Which industries do you work with?",
       answer: "From education and research, to ecommerce and logistics - and plenty in between! The best part? Because we're all at the start of the AI revolution, these core skills work across every industry. No matter your sector, you'll learn exactly how to make AI deliver real results for you and your business!"
+    },
+    {
+      question: "What's the difference between Workshops, Cohort Courses, and 1-to-1 Consulting?",
+      answer: (
+        <div>
+          <p className="mb-3"><strong>Workshops:</strong> Live, tailored training for your team (5-20 people). Bespoke to your business needs, delivered online with no external attendees.</p>
+          
+          <p className="mb-3"><strong>Cohort Courses:</strong> Live training on specific AI topics (like "AI Content Operations" or "AI Automation Sprint"). You'll learn alongside other professionals in small groups. Tickets sold separately throughout the year. <em>Join our newsletter to be first to know when enrolment opens.</em></p>
+          
+          <p><strong>1-to-1 Consulting:</strong> Personalised support for solo entrepreneurs and small business owners. Get hands-on help implementing AI in your specific situation.</p>
+        </div>
+      )
+    },
+     {
+      question: "What courses do you offer?",
+      answer: "We run specialised cohort courses throughout the year on topics like AI content operations, workflow automation, and AI implementation strategy. Each course is live, interactive, and limited to small groups. Join our newsletter to be notified when enrollment opens."
+    },
+    {
+      question: "How do I know which option is right for me?",
+      answer: (
+        <div>
+          <p className="mb-2"><strong>Choose Free Tools if:</strong> You're just getting started and want to explore AI on your own.</p>
+          
+          <p className="mb-2"><strong>Choose a Cohort Course if:</strong> You want structured learning on a specific topic alongside other professionals. <em>(Join our newsletter for updates)</em></p>
+          
+          <p className="mb-2"><strong>Choose 1-to-1 Consulting if:</strong> You're a solo business owner who needs personalised guidance.</p>
+          
+          <p><strong>Choose a Workshop if:</strong> You have a team that needs tailored AI training for your specific business processes.</p>
+        </div>
+      )
     }
   ];
 

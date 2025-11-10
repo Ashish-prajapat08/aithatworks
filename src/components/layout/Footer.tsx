@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { Linkedin } from 'lucide-react';
-import FooterLogo from '../../assets/Images/FooterLogo.png';
+import download from '../../assets/Images/download.png';
 
 const Footer = () => {
   const navigate = useNavigate();
@@ -55,7 +55,7 @@ const Footer = () => {
           <div className="text-left flex flex-col justify-start">
             <button onClick={handleLogoClick} className="flex items-center -mt-2 p-0">
               <img 
-                src={FooterLogo}
+                src={download}
                 alt="AI That Works Logo" 
                 className="h-12 w-24 object-contain logo"
               />
@@ -70,10 +70,12 @@ const Footer = () => {
           <div className="text-left">
             <h3 className="font-semibold text-lg mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              <li><Link to="/gen-ai-kickstart" className="text-gray-400 hover:text-white" onClick={handleClick}>The Gen AI Kickstart Course</Link></li>
-              <li><Link to="/community" className="text-gray-400 hover:text-white" onClick={handleClick}>Community</Link></li>
-              <li><Link to="/goodie-bag" className="text-gray-400 hover:text-white" onClick={handleClick}>The AI Goodie Bag</Link></li>
+              {/* <li><Link to="/gen-ai-kickstart" className="text-gray-400 hover:text-white" onClick={handleClick}>The Gen AI Kickstart Course</Link></li> */}
+              {/* <li><Link to="/community" className="text-gray-400 hover:text-white" onClick={handleClick}>Community</Link></li> */}
+              {/* <li><Link to="/goodie-bag" className="text-gray-400 hover:text-white" onClick={handleClick}>The AI Goodie Bag</Link></li> */}
+              <li><Link to="/free-tools" className="text-gray-400 hover:text-white" onClick={handleClick}>Free Tools</Link></li>
               <li><Link to="/workshops" className="text-gray-400 hover:text-white" onClick={handleClick}>Workshops</Link></li>
+              <li><Link to="/cohort-courses" className="text-gray-400 hover:text-white" onClick={handleClick}>1-to-1 Consulting</Link></li>
               <li><Link to="/speaking" className="text-gray-400 hover:text-white" onClick={handleClick}>Speaking</Link></li>
               <li><Link to="/about" className="text-gray-400 hover:text-white" onClick={handleAboutClick}>About Us</Link></li>
               <li><Link to="/contact" className="text-gray-400 hover:text-white" onClick={handleClick}>Contact Us</Link></li>

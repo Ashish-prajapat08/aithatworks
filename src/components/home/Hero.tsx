@@ -39,16 +39,13 @@ const Hero = () => {
             </div>
             
             <p className="mt-6 text-lg text-black 900 max-w-xl leading-relaxed">
-              Get the essential AI training, tools & support you and your teams need with AI That Works. Delivering practical, actionable and effective AI solutions, always.
+              Practical AI training and tools for business owners who are done feeling overwhelmed and ready to get results.
             </p>
 
-            {/* Mobile Image after the paragraph */}
+            {/* Mobile Image */}
             <div className="lg:hidden flex justify-center mt-8 mb-0 p-0">
               <picture>
-                <source
-                  type="image/webp"
-                  srcSet="https://i.imgur.com/zYdb9ct.webp"
-                />
+                <source type="image/webp" srcSet="https://i.imgur.com/zYdb9ct.webp" />
                 <img
                   src={Picture}
                   alt="AI That Works"
@@ -60,53 +57,50 @@ const Hero = () => {
               </picture>
             </div>
 
-            <hr className="lg:hidden my-4 border-t-2 border-black p-0 mt-[14px]" /> {/* Section Divider */}
+            <hr className="lg:hidden my-4 border-t-2 border-black p-0 mt-[14px]" />
 
             <div className="mt-8 flex flex-col sm:flex-row space-y-6 sm:space-y-0 sm:space-x-6">
-  {/* Kickstart CTA */}
-  <div className="group/btn relative w-full sm:w-auto">
-    <div className="absolute inset-0 transition-all duration-300 ease-out">
-      {/* Button hover layers */}
-      <div className="absolute inset-0 transition-all duration-300 ease-out group-hover/btn:-translate-x-1 group-hover/btn:-translate-y-1">
-        <div className="absolute inset-0 rounded-xl bg-[#ff5ec4] border-2 border-black opacity-40"></div>
-      </div>
-      <div className="absolute inset-0 transition-all duration-300 ease-out delay-[25ms] group-hover/btn:-translate-x-2 group-hover/btn:-translate-y-2">
-        <div className="absolute inset-0 rounded-xl bg-[#ff5ec4] border-2 border-black opacity-60"></div>
-      </div>
-    </div>
+              {/* Get Free AI Tools CTA */}
+              <div className="group/btn relative w-full sm:w-auto">
+                <div className="absolute inset-0 transition-all duration-300 ease-out">
+                  <div className="absolute inset-0 transition-all duration-300 ease-out group-hover/btn:-translate-x-1 group-hover/btn:-translate-y-1">
+                    <div className="absolute inset-0 rounded-xl bg-[#ff5ec4] border-2 border-black opacity-40"></div>
+                  </div>
+                  <div className="absolute inset-0 transition-all duration-300 ease-out delay-[25ms] group-hover/btn:-translate-x-2 group-hover/btn:-translate-y-2">
+                    <div className="absolute inset-0 rounded-xl bg-[#ff5ec4] border-2 border-black opacity-60"></div>
+                  </div>
+                </div>
 
-    <Link
-      to="/gen-ai-kickstart"
-      className="relative inline-flex w-full items-center justify-center px-6 py-3 bg-[#ff5ec4] text-white hover:bg-[#ff4bb8] hover:text-white rounded-xl font-semibold transition-colors border-2 border-black transform-gpu group-hover/btn:-translate-x-3 group-hover/btn:-translate-y-3"
-    >
-      Join the Kickstart Course
-      <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover/btn:translate-x-1" />
-    </Link>
-  </div>
+                <Link
+                  to="/free-tools"
+                  className="relative inline-flex w-full items-center justify-center px-6 py-3 bg-[#ff5ec4] text-white hover:bg-[#ff4bb8] rounded-xl font-semibold transition-colors border-2 border-black transform-gpu group-hover/btn:-translate-x-3 group-hover/btn:-translate-y-3"
+                >
+                  Get Free AI Tools
+                  <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover/btn:translate-x-1" />
+                </Link>
+              </div>
 
-  {/* What We Offer CTA */}
-  <div className="group/btn relative w-full sm:w-auto">
-    <div className="absolute inset-0 transition-all duration-300 ease-out">
-      {/* Button hover layers */}
-      <div className="absolute inset-0 transition-all duration-300 ease-out group-hover/btn:-translate-x-1 group-hover/btn:-translate-y-1">
-        <div className="absolute inset-0 rounded-xl bg-black/50 border-2 border-black opacity-40"></div>
-      </div>
-      <div className="absolute inset-0 transition-all duration-300 ease-out delay-[25ms] group-hover/btn:-translate-x-2 group-hover/btn:-translate-y-2">
-        <div className="absolute inset-0 rounded-xl bg-black/30 border-2 border-black opacity-60"></div>
-      </div>
-    </div>
+              {/* Book a Workshop CTA */}
+              <div className="group/btn relative w-full sm:w-auto">
+                <div className="absolute inset-0 transition-all duration-300 ease-out">
+                  <div className="absolute inset-0 transition-all duration-300 ease-out group-hover/btn:-translate-x-1 group-hover/btn:-translate-y-1">
+                    <div className="absolute inset-0 rounded-xl bg-black/50 border-2 border-black opacity-40"></div>
+                  </div>
+                  <div className="absolute inset-0 transition-all duration-300 ease-out delay-[25ms] group-hover/btn:-translate-x-2 group-hover/btn:-translate-y-2">
+                    <div className="absolute inset-0 rounded-xl bg-black/30 border-2 border-black opacity-60"></div>
+                  </div>
+                </div>
 
-    <button
-      onClick={scrollToWays}
-      className="relative inline-flex w-full items-center justify-center px-6 py-3 bg-white text-[#3843d0] hover:bg-[#3843d0] hover:text-white rounded-xl font-semibold transition-colors border-2 border-black transform-gpu group-hover/btn:-translate-x-3 group-hover/btn:-translate-y-3"
-    >
-      What we offer
-    </button>
-  </div>
-</div>
+                <Link
+                  to="/workshops"
+                  className="relative inline-flex w-full items-center justify-center px-6 py-3 bg-white text-[#3843d0] hover:bg-[#3843d0] hover:text-white rounded-xl font-semibold transition-colors border-2 border-black transform-gpu group-hover/btn:-translate-x-3 group-hover/btn:-translate-y-3"
+                >
+                  Book a Workshop for Your Team
+                </Link>
+              </div>
+            </div>
 
-
-            <div className="mt-8 flex flex-wrap justify-bete gap-4 text-sm text-gray-600">
+            <div className="mt-8 flex flex-wrap justify-between gap-4 text-sm text-gray-600">
               <span className="flex items-center">
                 <span className="mr-2">✓</span> Real-world use cases
               </span>
@@ -116,18 +110,13 @@ const Hero = () => {
               <span className="flex items-center">
                 <span className="mr-2">✓</span> Focus on what matters
               </span>
-       
-          </div>
-
+            </div>
           </div>
 
           {/* Desktop Image */}
           <div className="hidden lg:flex lg:items-start lg:justify-center translate-y-8">
             <picture>
-              <source
-                type="image/webp"
-                srcSet="https://i.imgur.com/zYdb9ct.webp"
-              />
+              <source type="image/webp" srcSet="https://i.imgur.com/zYdb9ct.webp" />
               <img
                 src={Picture}
                 alt="AI That Works"

@@ -1,22 +1,8 @@
 import React from 'react';
-import { Users, Target, TrendingUp, FileText } from 'lucide-react';
-import { useNavigate, useLocation, Link } from 'react-router-dom';
+import { Users, Target, TrendingUp } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const ConsultancyBanner = () => {
-  const navigate = useNavigate();
-  const location = useLocation();
-
-  const handleScheduleClick = () => {
-    if (location.pathname === '/') {
-      const newsletterSection = document.getElementById('newsletter');
-      if (newsletterSection) {
-        newsletterSection.scrollIntoView({ behavior: 'smooth' });
-      }
-    } else {
-      navigate('/', { state: { scrollToNewsletter: true } });
-    }
-  };
-
   const handleDownload = () => {
     const link = document.createElement('a');
     link.href = 'https://drive.google.com/uc?export=download&id=1EGJAqT4w-EvYnqEEZiKCzqQsWlS2iX1F';
@@ -82,21 +68,15 @@ const ConsultancyBanner = () => {
               ))}
             </div>
 
+            {/* REMOVED SECTION - Don't include this anymore:
             <div className="mt-8 pt-8 border-t border-gray-200">
               <p className="text-gray-600 mb-4">See our 2025 Workshop Brochure for details on:</p>
               <ul className="text-gray-600 list-disc list-inside mb-6 space-y-2">
                 <li>Online and in-person training options</li>
                 <li>6 and 12 month training programs</li>
               </ul>
-              
-              <button
-                onClick={handleDownload}
-                className="bg-[#3843d0] text-white px-6 py-2.5 rounded-xl font-semibold hover:bg-[#2d35a8] transition-colors inline-flex items-center border-2 border-black"
-              >
-                <FileText className="h-4 w-4 mr-2" />
-                Download our AI Workshop Brochure
-              </button>
             </div>
+            */}
           </div>
 
           <div className="relative">
@@ -109,13 +89,23 @@ const ConsultancyBanner = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
               
               <div className="absolute bottom-0 left-0 right-0 p-6">
-                <div className="bg-white/10 backdrop-blur-md rounded-xl p-6">
+                <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 space-y-4">
                   <p className="text-2xl font-semibold text-white mb-3">
                     Ready to Start?
                   </p>
+                  
+                  {/* RELOCATED: Download Brochure button - now ABOVE Contact button */}
+                  <button
+                    onClick={handleDownload}
+                    className="w-full bg-white text-[#3843d0] px-6 py-2.5 rounded-xl font-semibold hover:bg-gray-50 transition-colors border-2 border-black block text-center"
+                  >
+                    Download our AI Workshop Brochure
+                  </button>
+
+                  {/* Contact button - now BELOW Download button */}
                   <Link
                     to="/contact"
-                    className="bg-white text-[#3843d0] px-6 py-2.5 rounded-xl font-semibold hover:bg-gray-50 transition-colors w-full border-2 border-black block text-center"
+                    className="w-full bg-white text-[#3843d0] px-6 py-2.5 rounded-xl font-semibold hover:bg-gray-50 transition-colors border-2 border-black block text-center"
                   >
                     Contact us to make a booking
                   </Link>
