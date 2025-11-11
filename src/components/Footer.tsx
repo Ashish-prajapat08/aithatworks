@@ -18,7 +18,7 @@ const Footer = () => {
               Transforming businesses through innovative AI solutions
             </p>
           </div>
-          
+           
           <div>
             <h3 className="font-semibold text-lg mb-4">Solutions</h3>
             <ul className="space-y-2">

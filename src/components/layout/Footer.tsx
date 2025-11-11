@@ -3,11 +3,12 @@ import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { Linkedin } from 'lucide-react';
 import download from '../../assets/Images/download.png';
 
+
 const Footer = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  const handleClick = () => {
+  const handleClick = () => { 
     window.scrollTo(0,0);
   };
 
@@ -54,8 +55,9 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="text-left flex flex-col justify-start">
             <button onClick={handleLogoClick} className="flex items-center -mt-2 p-0">
+              {/* ✅ DIRECT PATH USE KARO */}
               <img 
-                src={download}
+                src="/images/download.png"
                 alt="AI That Works Logo" 
                 className="h-12 w-24 object-contain logo"
               />
