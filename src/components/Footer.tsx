@@ -9,7 +9,7 @@ const Footer = () => {
           <div>
             <Link to="/" className="flex items-center">
               <img 
-                src="/public/download.png" 
+                src="/assets/images/download.png" 
                 alt="AI That Works Logo" 
                 className="h-16 w-28 object-contain logo"
               />
