@@ -7,20 +7,27 @@ const FreeToolsAccess = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Check for cookie on page load
-    const checkCookie = () => {
+    // Check for cookie AND renew it on page load
+    const checkAndRenewCookie = () => {
       const cookies = document.cookie.split(';');
       const hasAccess = cookies.some(cookie => 
         cookie.trim().startsWith('aitw_free_tools_access=true')
       );
 
       if (!hasAccess) {
-        // Redirect to /free-tools if no cookie found
+        // Cookie nahi mili → Signup page pe bhej do
         navigate('/free-tools');
+      } else {
+        // Cookie MIL GAYI → Ab isko RENEW kar do (365 days extend)
+        const expiryDate = new Date();
+        expiryDate.setDate(expiryDate.getDate() + 365);
+        document.cookie = `aitw_free_tools_access=true; expires=${expiryDate.toUTCString()}; path=/`;
+        
+        console.log('✅ Cookie renewed! New expiry:', expiryDate.toUTCString());
       }
     };
-
-    checkCookie();
+ 
+    checkAndRenewCookie();
   }, [navigate]);
 
   return (

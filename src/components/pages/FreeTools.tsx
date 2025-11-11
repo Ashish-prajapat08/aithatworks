@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowLeft, Lock, ArrowRight } from 'lucide-react';
+import { ArrowLeft, Lock, ArrowRight, AlertCircle } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
 
 const FreeTools = () => {
@@ -16,7 +16,6 @@ const FreeTools = () => {
   const [errorMessage, setErrorMessage] = useState('');
 
   // Example resource cards - client will provide actual image
-  
   const resources = [
     { title: "5 Ways I Use AI Every Day", description: "Real use cases that save 8+ hours per week" },
     { title: "Stop Guessing with AI Prompts", description: "3-step framework for better results" },
@@ -34,8 +33,71 @@ const FreeTools = () => {
       ...prevData,
       [name]: type === 'checkbox' ? checked : value
     }));
+    // Clear error message when user types
+    if (errorMessage) setErrorMessage('');
   };
 
+  // // Enhanced email validation function
+  // const validateEmail = (email: string): boolean => {
+  //   // Basic format check
+  //   const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.(com|org|net|ai|co|io|in|us|uk|edu|gov)$/i;
+  //   if (!emailRegex.test(email)) return false;
+
+  //   // Check for valid domain (must have at least 2 characters after dot)
+  //   const parts = email.split('@');
+  //   if (parts.length !== 2) return false;
+    
+  //   const domain = parts[1];
+  //   const domainParts = domain.split('.');
+    
+  //   // Domain should have at least one dot and valid extension
+  //   if (domainParts.length < 2) return false;
+    
+  //   // Last part (extension) should be at least 2 characters
+  //   const extension = domainParts[domainParts.length - 1];
+  //   if (extension.length < 2) return false;
+
+  //   // Domain name (before extension) should be at least 2 characters
+  //   const domainName = domainParts[domainParts.length - 2];
+  //   if (domainName.length < 2) return false;
+
+  //   return true;
+  // };
+  const validateEmail = (email: string): boolean => {
+  const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.(com|org|net|ai|co|io|in|us|uk|edu|gov)$/i;
+  if (!emailRegex.test(email)) return false;
+
+  const domain = email.split('@')[1].toLowerCase();
+
+  const typoDomains = [
+    'gamil.com', 'gmil.com', 'gnail.com', 'gail.com', 'gmail.co', 'gmail.con',
+    'gil.com', 'gmaill.com', 'gmailc.om', 'gmail.cm', 'gmail.om','gil.com'
+  ];
+
+  // ✅ Hard block known typos
+  if (typoDomains.includes(domain)) return false;
+
+  // ✅ Smart similarity check (catch gil.com etc)
+  const isLikelyGmailTypo = domain.length <= 10 && levenshtein(domain, 'gmail.com') <= 2;
+  if (isLikelyGmailTypo) return false;
+
+  return true;
+};
+
+// Helper function to calculate Levenshtein distance (string similarity)
+const levenshtein = (a: string, b: string): number => {
+  const dp = Array.from({ length: a.length + 1 }, () => Array(b.length + 1).fill(0));
+  for (let i = 0; i <= a.length; i++) dp[i][0] = i;
+  for (let j = 0; j <= b.length; j++) dp[0][j] = j;
+  for (let i = 1; i <= a.length; i++) {
+    for (let j = 1; j <= b.length; j++) {
+      dp[i][j] = a[i - 1] === b[j - 1]
+        ? dp[i - 1][j - 1]
+        : Math.min(dp[i - 1][j - 1], dp[i - 1][j], dp[i][j - 1]) + 1;
+    }
+  }
+  return dp[a.length][b.length];
+};
 
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -43,9 +105,17 @@ const FreeTools = () => {
     setIsSubmitting(true);
     setErrorMessage('');
 
+    // Validate consent checkbox
     if (!formData.consent) {
       setIsSubmitting(false);
       setErrorMessage('Please agree to receive updates.');
+      return;
+    }
+
+    // Validate email format
+    if (!validateEmail(formData.email)) {
+      setIsSubmitting(false);
+      setErrorMessage('Please enter a valid email address (e.g., name@example.com)');
       return;
     }
 
@@ -58,21 +128,36 @@ const FreeTools = () => {
         body: JSON.stringify(formData),
       });
 
-      const result = await response.json();
+      // Check if response is ok (status 200-299)
       if (response.ok) {
+        const result = await response.json();
+        
         // Set cookie for 365 days
         const expiryDate = new Date();
         expiryDate.setDate(expiryDate.getDate() + 365);
+
+//         const expiryDate = new Date();
+// expiryDate.setTime(expiryDate.getTime() + (1 * 60 * 1000)); // 1 minute
         document.cookie = `aitw_free_tools_access=true; expires=${expiryDate.toUTCString()}; path=/`;
+        
+        console.log('✅ Cookie set! Redirecting...');
         
         // Redirect to access page
         navigate('/free-tools-access');
       } else {
-        setErrorMessage(result.message || 'Something went wrong. Please try again later.');
+        // Handle API error responses
+        try {
+          const result = await response.json();
+          setErrorMessage(result.message || 'Something went wrong. Please try again.');
+        } catch {
+          // If response is not JSON
+          setErrorMessage('Something went wrong. Please try again.');
+        }
       }
     } catch (error) {
-      setErrorMessage('Network error. Please try again later.');
-      console.error('Error during subscription:', error);
+      // Network error or fetch failed
+      console.error('❌ Subscription error:', error);
+      setErrorMessage('Network error. Please check your connection and try again.');
     } finally {
       setIsSubmitting(false);
     }
@@ -162,10 +247,18 @@ const FreeTools = () => {
               ENTER YOUR EMAIL TO UNLOCK ALL FREE TOOLS
             </h2>
             
+            {/* Enhanced Error Message Display */}
             {errorMessage && (
-              <div className="mb-4 p-3 bg-red-100 text-red-800 rounded-lg text-center">
-                {errorMessage}
-              </div>
+              <motion.div 
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="mb-4 p-4 bg-red-50 border-2 border-red-200 rounded-lg flex items-start gap-3"
+              >
+                <AlertCircle className="h-5 w-5 text-red-600 flex-shrink-0 mt-0.5" />
+                <div className="flex-1">
+                  <p className="text-red-800 font-medium">{errorMessage}</p>
+                </div>
+              </motion.div>
             )}
 
             <form onSubmit={handleSubmit} className="space-y-6">
@@ -212,9 +305,9 @@ const FreeTools = () => {
                   onChange={handleChange}
                   className="w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-[#3843d0] focus:ring-2 focus:ring-[#3843d0]/20 outline-none transition-colors"
                   required
-                  pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
-                  title="Please enter a valid email address"
+                  placeholder="name@example.com"
                 />
+                <p className="text-xs text-gray-500 mt-1">Enter a valid email address (e.g., john@gmail.com)</p>
               </div>
 
               <div className="flex items-start">
@@ -237,10 +330,22 @@ const FreeTools = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className={`w-full ${isSubmitting ? 'bg-gray-400 cursor-not-allowed' : 'bg-[#3843d0]'} text-white px-6 py-4 rounded-lg font-semibold hover:bg-[#2d35a8] transition-colors flex items-center justify-center group border-2 border-black`}
+                className={`w-full ${isSubmitting ? 'bg-gray-400 cursor-not-allowed' : 'bg-[#3843d0] hover:bg-[#2d35a8]'} text-white px-6 py-4 rounded-lg font-semibold transition-colors flex items-center justify-center group border-2 border-black`}
               >
-                {isSubmitting ? 'Processing...' : 'Get Free Access Now'}
-                <ArrowRight className="ml-2 h-5 w-5 transform group-hover:translate-x-1 transition-transform" />
+                {isSubmitting ? (
+                  <>
+                    <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    </svg>
+                    Processing...
+                  </>
+                ) : (
+                  <>
+                    Get Free Access Now
+                    <ArrowRight className="ml-2 h-5 w-5 transform group-hover:translate-x-1 transition-transform" />
+                  </>
+                )}
               </button>
 
               <p className="text-center text-sm text-gray-500">
