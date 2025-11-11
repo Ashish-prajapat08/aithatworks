@@ -17,7 +17,7 @@ const Navbar = () => {
 
   return (
     <motion.nav
-      initial={{ y: -100 }}
+      initial={{ y: -100 }} 
       animate={{ y: 0 }}
       className={clsx(
         'fixed w-full z-50 transition-all duration-300 bg-white border-b border-black/10',

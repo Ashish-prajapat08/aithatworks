@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { Linkedin } from 'lucide-react';
-import download from '../../assets/Images/download.png';
+import download from '../..public/download.png';
 
 
 const Footer = () => {
@@ -57,7 +57,7 @@ const Footer = () => {
             <button onClick={handleLogoClick} className="flex items-center -mt-2 p-0">
               {/* ✅ DIRECT PATH USE KARO */}
               <img 
-                src="/images/download.png"
+                src="/public/download.png"
                 alt="AI That Works Logo" 
                 className="h-12 w-24 object-contain logo"
               />
