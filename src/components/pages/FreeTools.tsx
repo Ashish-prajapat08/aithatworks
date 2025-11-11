@@ -79,7 +79,9 @@ const FreeTools = () => {
 
   // ✅ Smart similarity check (catch gil.com etc)
   const isLikelyGmailTypo = domain.length <= 10 && levenshtein(domain, 'gmail.com') <= 2;
-  if (isLikelyGmailTypo) return false;
+  // if (isLikelyGmailTypo) return false;
+  if (domain !== 'gmail.com' && isLikelyGmailTypo) return false;
+
 
   return true;
 };
@@ -204,7 +206,7 @@ const levenshtein = (a: string, b: string): number => {
         </motion.div>
 
         {/* Resource Preview Section - Locked */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -217,12 +219,12 @@ const levenshtein = (a: string, b: string): number => {
                 className="relative bg-white rounded-xl p-6 border-2 border-gray-200 hover:border-[#3843d0] transition-colors"
               >
                 {/* Lock overlay */}
-                <div className="absolute inset-0 bg-white/80 backdrop-blur-sm rounded-xl flex items-center justify-center">
+                {/* <div className="absolute inset-0 bg-white/80 backdrop-blur-sm rounded-xl flex items-center justify-center">
                   <Lock className="h-8 w-8 text-[#3843d0]" />
                 </div>
-                
+                 */}
                 {/* Blurred content */}
-                <div className="filter blur-sm">
+                {/* <div className="filter blur-sm">
                   <h3 className="text-lg font-bold text-gray-900 mb-2">
                     {resource.title}
                   </h3>
@@ -233,8 +235,89 @@ const levenshtein = (a: string, b: string): number => {
               </div>
             ))}
           </div>
-        </motion.div>
+        </motion.div> */}
+{/* Resource Preview Section - Locked */}
+<motion.div
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8, delay: 0.2 }}
+  className="mb-16"
+>
+  <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+    {/* {resources.map((resource, index) => (
+      <div
+        key={index}
+        // className="relative bg-white rounded-xl p-6 border-2 border-gray-200 hover:border-[#3843d0] transition-colors "
+        className="relative bg-gradient-to-br from-white to-gray-50 rounded-xl p-6 border-2 border-gray-200 hover:border-[#3843d0] transition-all duration-300 hover:shadow-lg overflow-hidden group"
 
+      >
+        {/* Lock overlay with pointer-events-none to prevent text selection */}
+        {/* <div className="absolute inset-0 bg-white/80 backdrop-blur-sm rounded-xl flex items-center justify-center z -0 pointer-events-none select-none">
+          <Lock className="h-8 w-8 text-[#3843d0]" />
+        </div> */}
+        {/* <div className="absolute inset-0 bg-white/85 backdrop-blur-sm rounded-xl flex items-center justify-center z-1 pointer-events-none select-none transition-all duration-300 group-hover:bg-white/90">
+    <Lock className="h-8 w-8 text-[#3843d0] transition-transform duration-300 group-hover:scale-110" />
+  </div>
+        
+        {/* Blurred content - MAKE IT NON-SELECTABLE */}
+        {/* <div className="filter blur-sm select-none pointer-events-none">
+          <h3 className="text-lg font-bold text-gray-900 mb-2">
+            {resource.title}
+          </h3>
+          <p className="text-sm text-gray-600">
+            {resource.description}
+          </p>
+        </div>
+      </div>
+    ))} */} 
+    {resources.map((resource, index) => (
+  <div
+    key={index}
+    className="relative bg-gradient-to-br from-white to-gray-50 rounded-xl p-6 border-2 border-gray-200 hover:border-[#3843d0] transition-all duration-300 hover:shadow-lg overflow-hidden group"
+  >
+    {/* Lock badge */}
+    <div className="absolute top-3 right-3">
+      <div className="bg-[#3843d0]/10 p-2 rounded-lg">
+        <Lock className="h-4 w-4 text-[#3843d0]" />
+      </div>
+    </div>
+    
+    {/* Clear heading */}
+    <h3 className="text-lg font-bold text-gray-900 mb-3 pr-12">
+      {resource.title}
+    </h3>
+    
+    {/* Partially obscured description */}
+    <div className="relative">
+      {/* Gradient fade overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/50 to-white z-10 pointer-events-none" />
+      <p className="text-sm text-gray-500 line-clamp-2 blur-[2px]">
+        {resource.description}
+      </p>
+    </div>
+    
+    {/* "Unlock" text */}
+    {/* <div className="mt-4 pt-3 border-t border-gray-200">
+      <p className="text-xs font-semibold text-[#3843d0] flex items-center gap-1">
+        <Lock className="h-3 w-3" />
+        Sign up to access
+      </p>
+    </div> */}
+  </div>
+))}
+  </div>
+  
+
+  {/* Optional: Add a centered message */}
+  <div className="text-center mt-8">
+    <p className="text-xl font-bold text-gray-900 mb-2">
+      🔒 Enter your email below to unlock all resources
+    </p>
+    <p className="text-gray-600">
+      Join business owners already using these tools to save 8+ hours per week
+    </p>
+  </div>
+</motion.div>
         {/* Newsletter Signup Form */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -327,7 +410,7 @@ const levenshtein = (a: string, b: string): number => {
                 </label>
               </div>
 
-              <button
+              {/* <button
                 type="submit"
                 disabled={isSubmitting}
                 className={`w-full ${isSubmitting ? 'bg-gray-400 cursor-not-allowed' : 'bg-[#3843d0] hover:bg-[#2d35a8]'} text-white px-6 py-4 rounded-lg font-semibold transition-colors flex items-center justify-center group border-2 border-black`}
@@ -346,8 +429,40 @@ const levenshtein = (a: string, b: string): number => {
                     <ArrowRight className="ml-2 h-5 w-5 transform group-hover:translate-x-1 transition-transform" />
                   </>
                 )}
-              </button>
+              </button> */}
+             
 
+<div className="group/btn relative">
+  <div className="absolute left-0 right-0 top-0 bottom-0 transition-all duration-300 ease-out">
+    <div className="absolute inset-0 transition-all duration-300 ease-out group-hover/btn:-translate-x-1 group-hover/btn:-translate-y-1">
+      <div className="absolute inset-0 rounded-xl hover:bg-[#3843d0] border-2 border-black opacity-40"></div>
+    </div>
+    <div className="absolute inset-0 transition-all duration-300 ease-out delay-[25ms] group-hover/btn:-translate-x-2 group-hover/btn:-translate-y-2">
+      <div className="absolute inset-0 rounded-xl hover:bg-[#3843d0] border-2 border-black opacity-60"></div>
+    </div>
+  </div>
+
+  <button
+    type="submit"
+    disabled={isSubmitting}
+    className={`relative w-full ${isSubmitting ? 'bg-gray-400 cursor-not-allowed' : 'bg-[#3843d0] hover:bg-[#2d35a8]'} text-white px-6 py-4 rounded-lg font-semibold transition-colors flex items-center justify-center border-2 border-black transform-gpu group-hover/btn:-translate-x-3 group-hover/btn:-translate-y-3`}
+  >
+    {isSubmitting ? (
+      <>
+        <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+          <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+          <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+        </svg>
+        Processing...
+      </>
+    ) : (
+      <>
+        Get Free Access Now
+        <ArrowRight className="ml-2 h-5 w-5 transform group-hover/btn:translate-x-1 transition-transform" />
+      </>
+    )}
+  </button>
+</div>
               <p className="text-center text-sm text-gray-500">
                 Join business owners learning to make AI actually work. Unsubscribe anytime.
               </p>

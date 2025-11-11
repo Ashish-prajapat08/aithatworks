@@ -11,15 +11,15 @@ import Founder from './components/Founder';
 import FAQ from './components/FAQ';
 import Newsletter from './components/Newsletter';
 import Comingsoon from './components/pages/Comingsoon';
-import Community from './components/pages/Community';
-import Goodiebag from './components/pages/Goodiebag';
+// import Community from './components/pages/Community';
+// import Goodiebag from './components/pages/Goodiebag';
 import Workshops from './components/pages/Workshops';
 import Speaking from './components/pages/Speaking';
 import Contact from './components/pages/Contact';
 import PrivacyPolicy from './components/pages/PrivacyPolicy';
 import TermsCondition from './components/pages/TermsCondition';
 import CookiePolicy from './components/pages/CookiePolicy';
-import GenAIKickstart from './components/pages/GenAIKickstart';
+// import GenAIKickstart from './components/pages/GenAIKickstart';
 import FreeTools from './components/pages/FreeTools';
 import FreeToolsAccess from './components/pages/FreeToolsAccess';
 
@@ -27,7 +27,7 @@ const ScrollToTop = () => {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    window.scrollTo(0, 0); 
   }, [pathname]);
 
   return null;
@@ -95,9 +95,9 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/free-tools" element={<FreeTools />} /> 
              <Route path="/free-tools-access" element={<FreeToolsAccess />} /> 
-            <Route path="/gen-ai-kickstart" element={<GenAIKickstart />} />
-            <Route path="/community" element={<Community />} />
-            <Route path="/goodie-bag" element={<Goodiebag />} />
+            {/* <Route path="/gen-ai-kickstart" element={<GenAIKickstart />} /> */}
+            {/* <Route path="/community" element={<Community />} /> */}
+            {/* <Route path="/goodie-bag" element={<Goodiebag />} /> */}
             <Route path="/workshops" element={<Workshops />} />
             <Route path="/speaking" element={<Speaking />} />
             <Route path="/contact" element={<Contact />} />

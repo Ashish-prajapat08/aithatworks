@@ -89,7 +89,7 @@ const Hero = () => {
                   <div className="absolute inset-0 transition-all duration-300 ease-out delay-[25ms] group-hover/btn:-translate-x-2 group-hover/btn:-translate-y-2">
                     <div className="absolute inset-0 rounded-xl bg-black/30 border-2 border-black opacity-60"></div>
                   </div>
-                </div>
+                </div> 
 
                 <Link
                   to="/workshops"

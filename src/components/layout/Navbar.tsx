@@ -191,7 +191,7 @@ const Navbar = () => {
               Community
             </Link> */}
             <Link
-              to="/goodie-bag"
+              to="/free-tools"
               className="block text-gray-700 hover:text-[#3843d0] font-bold px-4 py-2 touch-manipulation"
               onClick={handleNavClick}
             >
