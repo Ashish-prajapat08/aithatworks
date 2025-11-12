@@ -77,7 +77,7 @@ const Footer = () => {
               {/* <li><Link to="/goodie-bag" className="text-gray-400 hover:text-white" onClick={handleClick}>The AI Goodie Bag</Link></li> */}
               <li><Link to="/free-tools" className="text-gray-400 hover:text-white" onClick={handleClick}>Free Tools</Link></li>
               <li><Link to="/workshops" className="text-gray-400 hover:text-white" onClick={handleClick}>Workshops</Link></li>
-              <li><Link to="/cohort-courses" className="text-gray-400 hover:text-white" onClick={handleClick}>1-to-1 Consulting</Link></li>
+              <li><Link to="/contact" className="text-gray-400 hover:text-white" onClick={handleClick}>1-to-1 Consulting</Link></li>
               <li><Link to="/speaking" className="text-gray-400 hover:text-white" onClick={handleClick}>Speaking</Link></li>
               <li><Link to="/about" className="text-gray-400 hover:text-white" onClick={handleAboutClick}>About Us</Link></li>
               <li><Link to="/contact" className="text-gray-400 hover:text-white" onClick={handleClick}>Contact Us</Link></li>

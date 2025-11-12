@@ -28,18 +28,12 @@ const Navbar = () => {
     }
   };
 
-  const handleSubscribeClick = () => {
-    navigate("/gen-ai-kickstart");
-    window.scrollTo({ top: 0 });
-    setIsMenuOpen(false);
-  };
-
   const handleAboutClick = (e: React.MouseEvent) => {
     e.preventDefault();
     if (location.pathname === "/") {
       const aboutSection = document.getElementById("about");
       if (aboutSection) {
-        const navHeight = 80; // Height of the fixed navbar
+        const navHeight = 80;
         const sectionTop = aboutSection.offsetTop - navHeight;
         window.scrollTo({
           top: sectionTop,
@@ -79,7 +73,7 @@ const Navbar = () => {
             </button>
           </div>
 
-          {/* Mobile menu button - Optimized for touch */}
+          {/* Mobile menu button */}
           <div className="flex md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -95,70 +89,45 @@ const Navbar = () => {
           </div>
 
           {/* Desktop navigation */}
-          <div className="hidden md:flex items-center space-x-6">
-            {/* <Link 
-              to="/gen-ai-kickstart" 
-              className="text-gray-700 hover:text-[#3843d0] text-sm font-bold whitespace-nowrap transition-colors duration-200"
-              onClick={handleNavClick}
-            >
-              The Gen AI Kickstart Course
-            </Link> */}
-            {/* <Link 
-              to="/community" 
-              className="text-gray-700 hover:text-[#3843d0] text-sm font-bold whitespace-nowrap transition-colors duration-200"
-              onClick={handleNavClick}
-            >
-              Community
-            </Link> */}
-            {/* <Link 
-              to="/goodie-bag" 
-              className="text-gray-700 hover:text-[#3843d0] text-sm font-bold whitespace-nowrap transition-colors duration-200"
-              onClick={handleNavClick}
-            >
-              The AI Goodie Bag
-            </Link> */}
-            <Link
-              to="/free-tools"
-              className="text-gray-700 hover:text-[#3843d0] text-sm font-bold whitespace-nowrap transition-colors duration-200"
+          <div className="hidden md:flex md:items-center md:space-x-6">
+            <Link 
+              to="/free-tools" 
+              className="inline-flex items-center text-gray-700 hover:text-[#3843d0] text-sm font-bold whitespace-nowrap transition-colors duration-200"
               onClick={handleNavClick}
             >
               Free Tools
             </Link>
 
-            <Link
-              to="/workshops"
-              className="text-gray-700 hover:text-[#3843d0] text-sm font-bold whitespace-nowrap transition-colors duration-200"
+            <Link 
+              to="/workshops" 
+              className="inline-flex items-center text-gray-700 hover:text-[#3843d0] text-sm font-bold whitespace-nowrap transition-colors duration-200"
               onClick={handleNavClick}
             >
-              {/* Online Workshops */}
               Workshops
             </Link>
-            <Link
-              to="/speaking"
-              className="text-gray-700 hover:text-[#3843d0] text-sm font-bold whitespace-nowrap transition-colors duration-200"
+            
+            <Link 
+              to="/speaking" 
+              className="inline-flex items-center text-gray-700 hover:text-[#3843d0] text-sm font-bold whitespace-nowrap transition-colors duration-200"
               onClick={handleNavClick}
             >
               Speaking
             </Link>
+            
             <button
               onClick={handleAboutClick}
-              className="text-gray-700 hover:text-[#3843d0] text-sm font-bold whitespace-nowrap transition-colors duration-200"
+              className="inline-flex items-center text-gray-700 hover:text-[#3843d0] text-sm font-bold whitespace-nowrap transition-colors duration-200 bg-transparent border-0 cursor-pointer p-0"
             >
               About
             </button>
-            <Link
-              to="/contact"
-              className="text-gray-700 hover:text-[#3843d0] text-sm font-bold whitespace-nowrap transition-colors duration-200"
+            
+            <Link 
+              to="/contact" 
+              className="inline-flex items-center text-gray-700 hover:text-[#3843d0] text-sm font-bold whitespace-nowrap transition-colors duration-200"
               onClick={handleNavClick}
             >
               Contact
             </Link>
-            {/* <button
-              onClick={handleSubscribeClick}
-              className="bg-[#3843d0] text-white px-4 py-2.5 rounded-xl text-sm font-semibold hover:bg-[#2d35a8] transition-colors border-2 border-black whitespace-nowrap"
-            >
-              Join the Newsletter
-            </button> */}
           </div>
         </div>
 
@@ -176,20 +145,6 @@ const Navbar = () => {
           className="md:hidden overflow-hidden border-t border-gray-200 bg-white"
         >
           <div className="py-4 space-y-4">
-            {/* <Link
-              to="/gen-ai-kickstart"
-              className="block text-gray-700 hover:text-[#3843d0] font-bold px-4 py-2 touch-manipulation"
-              onClick={handleNavClick}
-            >
-              The Gen AI Kickstart Course
-            </Link> */}
-            {/* <Link
-              to="/community"
-              className="block text-gray-700 hover:text-[#3843d0] font-bold px-4 py-2 touch-manipulation"
-              onClick={handleNavClick}
-            >
-              Community
-            </Link> */}
             <Link
               to="/free-tools"
               className="block text-gray-700 hover:text-[#3843d0] font-bold px-4 py-2 touch-manipulation"
@@ -197,13 +152,15 @@ const Navbar = () => {
             >
               Free Tools
             </Link>
+            
             <Link
               to="/workshops"
               className="block text-gray-700 hover:text-[#3843d0] font-bold px-4 py-2 touch-manipulation"
               onClick={handleNavClick}
             >
-               Workshops
+              Workshops
             </Link>
+            
             <Link
               to="/speaking"
               className="block text-gray-700 hover:text-[#3843d0] font-bold px-4 py-2 touch-manipulation"
@@ -211,12 +168,14 @@ const Navbar = () => {
             >
               Speaking
             </Link>
+            
             <button
               onClick={handleAboutClick}
               className="block w-full text-left text-gray-700 hover:text-[#3843d0] font-bold px-4 py-2 touch-manipulation"
             >
               About
             </button>
+            
             <Link
               to="/contact"
               className="block text-gray-700 hover:text-[#3843d0] font-bold px-4 py-2 touch-manipulation"
@@ -224,14 +183,6 @@ const Navbar = () => {
             >
               Contact 
             </Link>
-            {/* <div className="px-4">
-              <button
-                onClick={handleSubscribeClick}
-                className="w-full bg-[#3843d0] text-white px-6 py-2.5 rounded-xl text-base font-semibold hover:bg-[#2d35a8] transition-colors border-2 border-black"
-              >
-                Join the Newsletter
-              </button>
-            </div> */}
           </div>
         </motion.div>
       </div>
@@ -239,4 +190,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Navbar; 
