@@ -30,22 +30,23 @@ const Ways = () => {
           <div className="group relative h-[400px]">
             <div className="absolute inset-0 transition-all duration-300 ease-out transform-gpu">
               {/* Back layer */}
-              <div className="absolute inset-0 transition-all duration-300 ease-out group-hover:-translate-x-2 group-hover:-translate-y-1">
+              {/* <div className="absolute inset-0 transition-all duration-300 ease-out group-hover:-translate-x-2 group-hover:-translate-y-1">
                 <div className="absolute inset-0 rounded-2xl bg-[#ff5ec4] border-2 border-black opacity-40"></div>
-              </div>
+              </div> */}
               
-              {/* Middle layer */}
+              {/* Middle layer
               <div className="absolute inset-0 transition-all duration-300 ease-out delay-[50ms] group-hover:-translate-x-3 group-hover:-translate-y-2">
                 <div className="absolute inset-0 rounded-2xl bg-[#9399f4] border-2 border-black opacity-60"></div>
-              </div>
+              </div> */}
               
-              {/* Front layer */}
+              {/* Front layer
               <div className="absolute inset-0 transition-all duration-300 ease-out delay-100 group-hover:-translate-x-4 group-hover:-translate-y-3">
                 <div className="absolute inset-0 rounded-2xl bg-[#f7f5ff] border-2 border-black opacity-80"></div>
-              </div>
+              </div> */}
 
               {/* Main card */}
-              <div className="absolute inset-0 bg-white p-8 rounded-2xl transition-all duration-300 ease-out border-2 border-black transform-gpu group-hover:-translate-x-5 group-hover:-translate-y-4 flex flex-col">
+              <div className="absolute inset-0 bg-white p-8 rounded-2xl transition-all duration-300 ease-out border-2 border-black transform-gpu flex flex-col">
+                {/* group-hover:-translate-x-5 group-hover:-translate-y-4  */}
                 <div className="relative">
                   <div className="w-16 h-16 bg-gradient-to-br from-[#9399f4] to-[#ff5ec4] rounded-xl flex items-center justify-center mb-6 border-2 border-black transition-all duration-300 ease-out">
                     <Gift className="h-8 w-8 text-white" />
@@ -84,22 +85,23 @@ const Ways = () => {
           <div className="group relative h-[400px]">
             <div className="absolute inset-0 transition-all duration-300 ease-out transform-gpu">
               {/* Back layer */}
-              <div className="absolute inset-0 transition-all duration-300 ease-out group-hover:-translate-x-2 group-hover:-translate-y-1">
+              {/* <div className="absolute inset-0 transition-all duration-300 ease-out group-hover:-translate-x-2 group-hover:-translate-y-1">
                 <div className="absolute inset-0 rounded-2xl bg-[#ff5ec4] border-2 border-black opacity-40"></div>
-              </div>
+              </div> */}
               
               {/* Middle layer */}
-              <div className="absolute inset-0 transition-all duration-300 ease-out delay-[50ms] group-hover:-translate-x-3 group-hover:-translate-y-2">
+              {/* <div className="absolute inset-0 transition-all duration-300 ease-out delay-[50ms] group-hover:-translate-x-3 group-hover:-translate-y-2">
                 <div className="absolute inset-0 rounded-2xl bg-[#9399f4] border-2 border-black opacity-60"></div>
-              </div>
+              </div> */}
               
               {/* Front layer */}
-              <div className="absolute inset-0 transition-all duration-300 ease-out delay-100 group-hover:-translate-x-4 group-hover:-translate-y-3">
+              {/* <div className="absolute inset-0 transition-all duration-300 ease-out delay-100 group-hover:-translate-x-4 group-hover:-translate-y-3">
                 <div className="absolute inset-0 rounded-2xl bg-[#f7f5ff] border-2 border-black opacity-80"></div>
-              </div>
+              </div> */}
 
               {/* Main card */}
-              <div className="absolute inset-0 bg-white p-8 rounded-2xl transition-all duration-300 ease-out border-2 border-black transform-gpu group-hover:-translate-x-5 group-hover:-translate-y-4 flex flex-col">
+              <div className="absolute inset-0 bg-white p-8 rounded-2xl transition-all duration-300 ease-out border-2 border-black transform-gpu flex flex-col">
+                {/* group-hover:-translate-x-5 group-hover:-translate-y-4 */}
                 <div className="relative">
                   <div className="w-16 h-16 bg-gradient-to-br from-[#9399f4] to-[#ff5ec4] rounded-xl flex items-center justify-center mb-6 border-2 border-black transition-all duration-300 ease-out">
                     <Users className="h-8 w-8 text-white" />
@@ -138,22 +140,23 @@ const Ways = () => {
           <div className="group relative h-[400px]">
             <div className="absolute inset-0 transition-all duration-300 ease-out transform-gpu">
               {/* Back layer */}
-              <div className="absolute inset-0 transition-all duration-300 ease-out group-hover:-translate-x-2 group-hover:-translate-y-1">
+              {/* <div className="absolute inset-0 transition-all duration-300 ease-out group-hover:-translate-x-2 group-hover:-translate-y-1">
                 <div className="absolute inset-0 rounded-2xl bg-[#ff5ec4] border-2 border-black opacity-40"></div>
-              </div>
+              </div> */}
               
               {/* Middle layer */}
-              <div className="absolute inset-0 transition-all duration-300 ease-out delay-[50ms] group-hover:-translate-x-3 group-hover:-translate-y-2">
+              {/* <div className="absolute inset-0 transition-all duration-300 ease-out delay-[50ms] group-hover:-translate-x-3 group-hover:-translate-y-2">
                 <div className="absolute inset-0 rounded-2xl bg-[#9399f4] border-2 border-black opacity-60"></div>
-              </div>
+              </div> */}
               
               {/* Front layer */}
-              <div className="absolute inset-0 transition-all duration-300 ease-out delay-100 group-hover:-translate-x-4 group-hover:-translate-y-3">
+              {/* <div className="absolute inset-0 transition-all duration-300 ease-out delay-100 group-hover:-translate-x-4 group-hover:-translate-y-3">
                 <div className="absolute inset-0 rounded-2xl bg-[#f7f5ff] border-2 border-black opacity-80"></div>
-              </div>
+              </div> */}
 
               {/* Main card */}
-              <div className="absolute inset-0 bg-white p-8 rounded-2xl transition-all duration-300 ease-out border-2 border-black transform-gpu group-hover:-translate-x-5 group-hover:-translate-y-4 flex flex-col">
+              <div className="absolute inset-0 bg-white p-8 rounded-2xl transition-all duration-300 ease-out border-2 border-black transform-gpu flex flex-col">
+                {/* group-hover:-translate-x-5 group-hover:-translate-y-4 this needs to be added above if want baxes to be moved*/}
                 <div className="relative">
                   <div className="w-16 h-16 bg-gradient-to-br from-[#9399f4] to-[#ff5ec4] rounded-xl flex items-center justify-center mb-6 border-2 border-black transition-all duration-300 ease-out">
                     <UserCheck className="h-8 w-8 text-white" />
@@ -161,9 +164,9 @@ const Ways = () => {
                   <div className="absolute -inset-1 bg-gradient-to-br from-[#9399f4]/20 to-[#ff5ec4]/20 rounded-2xl blur-lg opacity-0 group-hover:opacity-100 transition-all duration-300" />
                 </div>
                 
-                <h3 className="text-2xl font-bold text-gray-900 mb-4 leading-relaxed">1-to-1 AI Consulting</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 leading-relaxed">1:1 AI Consulting</h3>
                 <div className="text-gray-600 mb-4 flex-grow leading-relaxed">
-                  Personalised AI implementation support for solo entrepreneurs and small business owners. Get unstuck fast with hands-on guidance.
+                  Personalised AI implementation support for business owners. Get unstuck fast with hands-on AI automation and creation guidance.
                 </div>
                 
                 <div className="group/btn relative mt-auto">

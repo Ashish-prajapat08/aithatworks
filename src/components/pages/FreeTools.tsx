@@ -17,14 +17,14 @@ const FreeTools = () => {
 
   // Example resource cards - client will provide actual image
   const resources = [
-    { title: "5 Ways I Use AI Every Day", description: "Real use cases that save 8+ hours per week" },
-    { title: "Stop Guessing with AI Prompts", description: "3-step framework for better results" },
-    { title: "AI Prompt Template Library", description: "Copy-paste prompts for common tasks" },
-    { title: "Meeting Summary Automation", description: "Never take notes manually again" },
-    { title: "Email Overhaul System", description: "Cut email time by 90 minutes per week" },
-    { title: "Decision-Making Framework", description: "Use AI for pros/cons analysis" },
-    { title: "AI Implementation Checklist", description: "4-criteria framework for choosing AI projects" },
-    { title: "Master AI Prompting Guide", description: "Strategic prompting techniques" }
+    { title: " Strategic Leadership Coach", description: "Real use cases that save 8+ hours per week" },
+    { title: "Short Form Hook Writer", description: "3-step framework for better results" },
+    { title: "AI Image Prompt Writer", description: "Copy-paste prompts for common tasks" },
+    { title: "7 Step AI Project Manager", description: "Never take notes manually again" },
+    { title: "Content Pillar Assistant", description: "Cut email time by 90 minutes per week" },
+    { title: "Business Ideation & Brainstorming Coach", description: "Use AI for pros/cons analysis" },
+    { title: "Competitive Intelligence Consultant", description: "4-criteria framework for choosing AI projects" },
+    { title: "Competitive Content Positioning Analyst", description: "Strategic prompting techniques" }
   ];
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -327,7 +327,7 @@ const levenshtein = (a: string, b: string): number => {
         >
           <div className="bg-white rounded-2xl p-8 shadow-xl border-2 border-black">
             <h2 className="text-3xl font-black text-gray-900 mb-2 text-center">
-              ENTER YOUR EMAIL TO UNLOCK ALL FREE TOOLS
+              ENTER YOUR DETAILS TO UNLOCK OUR ENTIRE AI TOOLKIT FOR FREE
             </h2>
             
             {/* Enhanced Error Message Display */}
@@ -390,7 +390,7 @@ const levenshtein = (a: string, b: string): number => {
                   required
                   placeholder="name@example.com"
                 />
-                <p className="text-xs text-gray-500 mt-1">Enter a valid email address (e.g., john@gmail.com)</p>
+                <p className="text-xs text-gray-500 mt-1 py-3.5">Enter a valid email address (e.g., john@gmail.com)</p>
               </div>
 
               <div className="flex items-start">
@@ -434,18 +434,18 @@ const levenshtein = (a: string, b: string): number => {
 
 <div className="group/btn relative">
   <div className="absolute left-0 right-0 top-0 bottom-0 transition-all duration-300 ease-out">
-    <div className="absolute inset-0 transition-all duration-300 ease-out group-hover/btn:-translate-x-1 group-hover/btn:-translate-y-1">
+    {/* <div className="absolute inset-0 transition-all duration-300 ease-out group-hover/btn:-translate-x-1 group-hover/btn:-translate-y-1">
       <div className="absolute inset-0 rounded-xl hover:bg-[#3843d0] border-2 border-black opacity-40"></div>
-    </div>
-    <div className="absolute inset-0 transition-all duration-300 ease-out delay-[25ms] group-hover/btn:-translate-x-2 group-hover/btn:-translate-y-2">
+    </div> */}
+    {/* <div className="absolute inset-0 transition-all duration-300 ease-out delay-[25ms] group-hover/btn:-translate-x-2 group-hover/btn:-translate-y-2">
       <div className="absolute inset-0 rounded-xl hover:bg-[#3843d0] border-2 border-black opacity-60"></div>
-    </div>
+    </div> */}
   </div>
 
   <button
     type="submit"
     disabled={isSubmitting}
-    className={`relative w-full ${isSubmitting ? 'bg-gray-400 cursor-not-allowed' : 'bg-[#3843d0] hover:bg-[#2d35a8]'} text-white px-6 py-4 rounded-lg font-semibold transition-colors flex items-center justify-center border-2 border-black transform-gpu group-hover/btn:-translate-x-3 group-hover/btn:-translate-y-3`}
+    className={`relative w-full ${isSubmitting ? 'bg-gray-400 cursor-not-allowed' : 'bg-[#3843d0] hover:bg-[#2d35a8]'} text-white px-6 py-4 rounded-lg font-semibold transition-colors flex items-center justify-center border-2 border-black transform-gpu`}
   >
     {isSubmitting ? (
       <>
@@ -464,14 +464,13 @@ const levenshtein = (a: string, b: string): number => {
   </button>
 </div>
               <p className="text-center text-sm text-gray-500">
-                Join business owners learning to make AI actually work. Unsubscribe anytime.
+                Join many other business owners learning to create AI That Works, one tool at a time!
               </p>
             </form>
           </div>
         </motion.div>
-      </div>
+      </div> 
     </div>
   );
 };
-
 export default FreeTools;

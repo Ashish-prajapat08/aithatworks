@@ -129,7 +129,7 @@ const Workshops = () => {
                   className="inline-flex items-center bg-[#3843d0] text-white px-6 py-3 rounded-lg hover:bg-[#2d35a8] transition-colors border-2 border-black"
                 >
                   <FileText className="h-5 w-5 mr-2" />
-                  Download our 2025 Workshop Brochure
+                  Download our 2026 Workshop Brochure
                 </button>
               </div>
               
@@ -270,6 +270,6 @@ const Workshops = () => {
       </div>
     </div>
   );
-};
+}; 
 
 export default Workshops;

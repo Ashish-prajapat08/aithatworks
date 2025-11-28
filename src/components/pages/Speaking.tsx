@@ -34,7 +34,7 @@ const Speaking = () => {
               Helping make AI accessible for forward thinking organisations
               and events.
               </h2>
-              <p className="text-xl text-[#535c73] mb-8">
+              <p className="text-xl text-[#000000] mb-8">
                 Let's discuss how we can bring clarity to AI for your audience.
               </p>
               <div className="group/btn relative inline-block">

@@ -161,12 +161,12 @@ const Newsletter = () => {
                   </div>
                   <label htmlFor="consent" className="ml-3 text-sm text-gray-600">
                     Count me in! I'd love AI tips, tricks and updates from AI That Works delivered straight to my inbox. Unsubscribe whenever you like!
-                  </label>
+                  </label> 
                 </div>
 
                 {errorMessage && (
                   <div className="text-red-600 text-sm mt-2">
-                    {errorMessage}
+                    {errorMessage} 
                   </div>
                 )}
 
