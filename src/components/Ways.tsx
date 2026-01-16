@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const Ways = () => {
   const handleBrochureDownload = () => {
     const link = document.createElement('a');
-    link.href = 'https://drive.google.com/uc?export=download&id=1EGJAqT4w-EvYnqEEZiKCzqQsWlS2iX1F';
+    link.href = 'https://drive.google.com/uc?export=download&id=1fFcgl0dvIzIA70BCi7_rucYznPBWHYA2';
     link.setAttribute('download', 'AI-Workshop-Brochure-2025.pdf');
     link.setAttribute('target', '_blank');
     document.body.appendChild(link);
@@ -26,7 +26,6 @@ const Ways = () => {
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
-          {/* Card 1: Our Free AI Tools */}
           <div className="group relative h-[400px]">
             <div className="absolute inset-0 transition-all duration-300 ease-out transform-gpu">
               {/* Back layer */}
@@ -34,29 +33,29 @@ const Ways = () => {
                 <div className="absolute inset-0 rounded-2xl bg-[#ff5ec4] border-2 border-black opacity-40"></div>
               </div> */}
               
-              {/* Middle layer
-              <div className="absolute inset-0 transition-all duration-300 ease-out delay-[50ms] group-hover:-translate-x-3 group-hover:-translate-y-2">
+              {/* Middle layer */}
+              {/* <div className="absolute inset-0 transition-all duration-300 ease-out delay-[50ms] group-hover:-translate-x-3 group-hover:-translate-y-2">
                 <div className="absolute inset-0 rounded-2xl bg-[#9399f4] border-2 border-black opacity-60"></div>
               </div> */}
               
-              {/* Front layer
-              <div className="absolute inset-0 transition-all duration-300 ease-out delay-100 group-hover:-translate-x-4 group-hover:-translate-y-3">
+              {/* Front layer */}
+              {/* <div className="absolute inset-0 transition-all duration-300 ease-out delay-100 group-hover:-translate-x-4 group-hover:-translate-y-3">
                 <div className="absolute inset-0 rounded-2xl bg-[#f7f5ff] border-2 border-black opacity-80"></div>
               </div> */}
 
               {/* Main card */}
               <div className="absolute inset-0 bg-white p-8 rounded-2xl transition-all duration-300 ease-out border-2 border-black transform-gpu flex flex-col">
-                {/* group-hover:-translate-x-5 group-hover:-translate-y-4  */}
+                {/* group-hover:-translate-x-5 group-hover:-translate-y-4 this needs to be added above if want baxes to be moved*/}
                 <div className="relative">
                   <div className="w-16 h-16 bg-gradient-to-br from-[#9399f4] to-[#ff5ec4] rounded-xl flex items-center justify-center mb-6 border-2 border-black transition-all duration-300 ease-out">
-                    <Gift className="h-8 w-8 text-white" />
+                    <UserCheck className="h-8 w-8 text-white" />
                   </div>
                   <div className="absolute -inset-1 bg-gradient-to-br from-[#9399f4]/20 to-[#ff5ec4]/20 rounded-2xl blur-lg opacity-0 group-hover:opacity-100 transition-all duration-300" />
                 </div>
                 
-                <h3 className="text-2xl font-bold text-gray-900 mb-4 leading-relaxed">Our Free AI Tools</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 leading-relaxed">AI Consulting</h3>
                 <div className="text-gray-600 mb-4 flex-grow leading-relaxed">
-                  Get instant access to practical AI resources, templates, and guides. Plus, join our weekly newsletter for actionable AI tips you can use right away.
+                  Personalised AI implementation support for business owners and teams. Get unstuck fast with hands-on AI automation and implementation guidance.
                 </div>
                 
                 <div className="group/btn relative mt-auto">
@@ -69,19 +68,18 @@ const Ways = () => {
                     </div>
                   </div>
 
-                  <Link
-                    to="/free-tools"
+                  <button
+                    onClick={handleBrochureDownload}
                     className="relative inline-flex w-full items-center justify-center px-6 py-3 bg-white text-[#3843d0] hover:bg-[#3843d0] hover:text-white rounded-xl font-semibold transition-colors border-2 border-black transform-gpu group-hover/btn:-translate-x-3 group-hover/btn:-translate-y-3"
                   >
-                    Get Free Tools
-                    <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover/btn:translate-x-1" />
-                  </Link>
+                    See our Brochure
+                    <FileText className="ml-2 h-5 w-5 transition-transform group-hover/btn:translate-x-1" />
+                  </button>
                 </div>
               </div>
             </div>
-          </div>
-
-          {/* Card 2: Team Workshops */}
+            </div>
+            {/* Card 2: Team Workshops */}
           <div className="group relative h-[400px]">
             <div className="absolute inset-0 transition-all duration-300 ease-out transform-gpu">
               {/* Back layer */}
@@ -135,8 +133,7 @@ const Ways = () => {
               </div>
             </div>
           </div>
-
-          {/* Card 3: 1-to-1 AI Consulting */}
+          {/* Card 1: Our Free AI Tools */}
           <div className="group relative h-[400px]">
             <div className="absolute inset-0 transition-all duration-300 ease-out transform-gpu">
               {/* Back layer */}
@@ -144,29 +141,29 @@ const Ways = () => {
                 <div className="absolute inset-0 rounded-2xl bg-[#ff5ec4] border-2 border-black opacity-40"></div>
               </div> */}
               
-              {/* Middle layer */}
-              {/* <div className="absolute inset-0 transition-all duration-300 ease-out delay-[50ms] group-hover:-translate-x-3 group-hover:-translate-y-2">
+              {/* Middle layer
+              <div className="absolute inset-0 transition-all duration-300 ease-out delay-[50ms] group-hover:-translate-x-3 group-hover:-translate-y-2">
                 <div className="absolute inset-0 rounded-2xl bg-[#9399f4] border-2 border-black opacity-60"></div>
               </div> */}
               
-              {/* Front layer */}
-              {/* <div className="absolute inset-0 transition-all duration-300 ease-out delay-100 group-hover:-translate-x-4 group-hover:-translate-y-3">
+              {/* Front layer
+              <div className="absolute inset-0 transition-all duration-300 ease-out delay-100 group-hover:-translate-x-4 group-hover:-translate-y-3">
                 <div className="absolute inset-0 rounded-2xl bg-[#f7f5ff] border-2 border-black opacity-80"></div>
               </div> */}
 
               {/* Main card */}
               <div className="absolute inset-0 bg-white p-8 rounded-2xl transition-all duration-300 ease-out border-2 border-black transform-gpu flex flex-col">
-                {/* group-hover:-translate-x-5 group-hover:-translate-y-4 this needs to be added above if want baxes to be moved*/}
+                {/* group-hover:-translate-x-5 group-hover:-translate-y-4  */}
                 <div className="relative">
                   <div className="w-16 h-16 bg-gradient-to-br from-[#9399f4] to-[#ff5ec4] rounded-xl flex items-center justify-center mb-6 border-2 border-black transition-all duration-300 ease-out">
-                    <UserCheck className="h-8 w-8 text-white" />
+                    <Gift className="h-8 w-8 text-white" />
                   </div>
                   <div className="absolute -inset-1 bg-gradient-to-br from-[#9399f4]/20 to-[#ff5ec4]/20 rounded-2xl blur-lg opacity-0 group-hover:opacity-100 transition-all duration-300" />
                 </div>
                 
-                <h3 className="text-2xl font-bold text-gray-900 mb-4 leading-relaxed">1:1 AI Consulting</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 leading-relaxed">Our Free AI Tools</h3>
                 <div className="text-gray-600 mb-4 flex-grow leading-relaxed">
-                  Personalised AI implementation support for business owners. Get unstuck fast with hands-on AI automation and creation guidance.
+                  Get instant access to practical AI resources, templates, and guides. Plus, join our weekly newsletter for actionable AI tips you can use right away.
                 </div>
                 
                 <div className="group/btn relative mt-auto">
@@ -179,13 +176,13 @@ const Ways = () => {
                     </div>
                   </div>
 
-                  <button
-                    onClick={handleBrochureDownload}
+                  <Link
+                    to="/free-tools"
                     className="relative inline-flex w-full items-center justify-center px-6 py-3 bg-white text-[#3843d0] hover:bg-[#3843d0] hover:text-white rounded-xl font-semibold transition-colors border-2 border-black transform-gpu group-hover/btn:-translate-x-3 group-hover/btn:-translate-y-3"
                   >
-                    See our Brochure
-                    <FileText className="ml-2 h-5 w-5 transition-transform group-hover/btn:translate-x-1" />
-                  </button>
+                    Get Free Tools
+                    <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover/btn:translate-x-1" />
+                  </Link>
                 </div>
               </div>
             </div>
