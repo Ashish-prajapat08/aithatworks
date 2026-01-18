@@ -327,6 +327,7 @@ const levenshtein = (a: string, b: string): number => {
         >
           <div className="bg-white rounded-2xl p-8 shadow-xl border-2 border-black">
             <h2 className="text-3xl font-black text-gray-900 mb-2 text-center">
+              {/* text-3xl font-black text-black sm:text-4xl md:text-5xl font-heading */}
               ENTER YOUR DETAILS TO UNLOCK OUR ENTIRE AI TOOLKIT FOR FREE
             </h2>
             

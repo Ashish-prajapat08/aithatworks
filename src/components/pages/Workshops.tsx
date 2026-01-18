@@ -7,8 +7,8 @@ const Workshops = () => {
 
   const handleDownload = () => {
     const link = document.createElement('a');
-    link.href = 'https://drive.google.com/uc?export=download&id=1EGJAqT4w-EvYnqEEZiKCzqQsWlS2iX1F';
-    link.setAttribute('download', 'AI-Workshop-Brochure-2025.pdf');
+    link.href = 'https://drive.google.com/uc?export=download&id=1fFcgl0dvIzIA70BCi7_rucYznPBWHYA2';
+    link.setAttribute('download', 'AI-Workshop-Brochure-2026.pdf');
     link.setAttribute('target', '_blank');
     document.body.appendChild(link);
     link.click();

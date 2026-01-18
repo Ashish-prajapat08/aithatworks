@@ -87,7 +87,8 @@ const Contact = () => {
               <Mail className="h-8 w-8 text-[#3843d0]" />
             </div>
 
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 mb-8">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 mb-8"> 
+              {/* text-3xl font-black text-black sm:text-4xl md:text-5xl font-heading */}
               GET IN TOUCH
             </h1>
 
@@ -101,7 +102,7 @@ const Contact = () => {
                     className="text-[#3843d0] hover:underline"
                   >
                     contactus@aithatworks.io
-                  </a>
+                  </a> 
                 </p>
               </div>
 
