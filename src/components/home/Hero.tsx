@@ -164,8 +164,8 @@ const Hero = () => {
           <div className="text-left mb-5">
             <div className="overflow-hidden mb-8">
               <h1 
-                className="text-3xl font-black text-gray-900 sm:text-4xl md:text-5xl leading-relaxed max-w-2xl"
-                style={{ letterSpacing: '0.02em' }}
+                className="text-3xl font-black tracking-tight text-gray-900 sm:text-4xl md:text-5xl leading-tight max-w-2xl"
+                style={{ letterSpacing: '-0.02em' }}
               >
                 <span className="block text-gray-900 mb-2">
                   STOP WONDERING
@@ -190,7 +190,7 @@ const Hero = () => {
                 <img
                   src={Picture}
                   alt="AI That Works"
-                  className="w-[75%] h-auto !border-0"
+                  className="w-[80%] h-auto !border-0"
                   loading="eager"
                   decoding="async"
                   fetchPriority="high"
@@ -214,8 +214,10 @@ const Hero = () => {
 
                 <Link
                   to="/free-tools"
-                  className="relative inline-flex items-center px-6 py-3 bg-[#ff5ec4] text-white hover:bg-[#ff4bb8] rounded-xl font-semibold transition-colors border-2 border-black transform-gpu group-hover/btn:-translate-x-3 group-hover/btn:-translate-y-3"
+                  className="relative inline-flex w-full items-center justify-center px-6 py-3 bg-[#ff5ec4] text-white hover:bg-[#ff4bb8] rounded-xl font-semibold transition-colors border-2 border-black transform-gpu group-hover/btn:-translate-x-3 group-hover/btn:-translate-y-3"
+                
                 >
+                  {/* relative inline-flex items-center px-6 py-3 bg-[#ff5ec4] text-white hover:bg-[#ff4bb8] rounded-xl font-semibold transition-colors border-2 border-black transform-gpu group-hover/btn:-translate-x-3 group-hover/btn:-translate-y-3" */}
                   Get Free AI Tools
                   <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover/btn:translate-x-1" />
                 </Link>
@@ -234,8 +236,9 @@ const Hero = () => {
 
                 <Link
                   to="/workshops"
-                  className="relative inline-flex items-center px-6 py-3 bg-white text-[#3843d0] hover:bg-[#3843d0] hover:text-white rounded-xl font-semibold transition-colors border-2 border-black transform-gpu group-hover/btn:-translate-x-3 group-hover/btn:-translate-y-3"
+                  className="relative inline-flex w-full items-center justify-center px-6 py-3 bg-white text-[#3843d0] hover:bg-[#3843d0] hover:text-white rounded-xl font-semibold transition-colors border-2 border-black transform-gpu group-hover/btn:-translate-x-3 group-hover/btn:-translate-y-3"
                 >
+                  {/* relative inline-flex items-center px-6 py-3 bg-white text-[#3843d0] hover:bg-[#3843d0] hover:text-white rounded-xl font-semibold transition-colors border-2 border-black transform-gpu group-hover/btn:-translate-x-3 group-hover/btn:-translate-y-3" */}
                   Book a Workshop for Your Team
                 </Link>
               </div>

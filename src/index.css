@@ -210,3 +210,11 @@
     padding-top: max(1.5rem, env(safe-area-inset-top));
   }
 }
+
+
+
+/* FAQ Questions with Clash Grotesk */
+.faq-question {
+  font-family: 'Clash Grotesk', sans-serif;
+  @apply font-bold;
+}

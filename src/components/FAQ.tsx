@@ -15,7 +15,7 @@ const FAQItem = ({ question, answer, isOpen, onClick, onContactClick }: {
         onClick={onClick}
         className="w-full bg-white rounded-xl px-6 py-4 flex justify-between items-center text-left transition-all duration-200 hover:shadow-lg"
       >
-        <span className="text-[#2d1c5a] font-semibold">{question}</span>
+        <span className="text-[#2d1c5a] font-bold faq-question">{question}</span>
         <ChevronDown 
           className={`h-4 w-4 text-[#2d1c5a] transition-transform duration-200 ${
             isOpen ? 'transform rotate-180' : ''
