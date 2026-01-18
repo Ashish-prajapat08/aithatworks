@@ -197,7 +197,7 @@ const Ways = () => {
               <div className="absolute inset-0 rounded-2xl bg-white border-2 border-black opacity-60 group-hover:opacity-80 transition-all duration-300 ease-out delay-[25ms]"></div>
             </div>
 
-            <div className="relative bg-white p-6 sm:p-8 rounded-2xl border-2 border-black transform-gpu group-hover:-translate-x-3 group-hover:-translate-y-3 transition-all duration-300 ease-out flex flex-col h-full">
+           <div className="relative bg-white p-6 sm:p-8 rounded-2xl border-2 border-black transform-gpu flex flex-col h-full">
               <div className="relative">
                 <div className="w-16 h-16 bg-gradient-to-br from-[#9399f4] to-[#ff5ec4] rounded-xl flex items-center justify-center mb-6 border-2 border-black transition-all duration-300 ease-out flex-shrink-0">
                   <UserCheck className="h-8 w-8 text-white" />
@@ -238,7 +238,7 @@ const Ways = () => {
               <div className="absolute inset-0 rounded-2xl bg-white border-2 border-black opacity-60 group-hover:opacity-80 transition-all duration-300 ease-out delay-[25ms]"></div>
             </div>
 
-            <div className="relative bg-white p-6 sm:p-8 rounded-2xl border-2 border-black transform-gpu group-hover:-translate-x-3 group-hover:-translate-y-3 transition-all duration-300 ease-out flex flex-col h-full">
+            <div className="relative bg-white p-6 sm:p-8 rounded-2xl border-2 border-black transform-gpu flex flex-col h-full">
               <div className="relative">
                 <div className="w-16 h-16 bg-gradient-to-br from-[#9399f4] to-[#ff5ec4] rounded-xl flex items-center justify-center mb-6 border-2 border-black transition-all duration-300 ease-out flex-shrink-0">
                   <Users className="h-8 w-8 text-white" />
@@ -279,7 +279,7 @@ const Ways = () => {
               <div className="absolute inset-0 rounded-2xl bg-white border-2 border-black opacity-60 group-hover:opacity-80 transition-all duration-300 ease-out delay-[25ms]"></div>
             </div>
 
-            <div className="relative bg-white p-6 sm:p-8 rounded-2xl border-2 border-black transform-gpu group-hover:-translate-x-3 group-hover:-translate-y-3 transition-all duration-300 ease-out flex flex-col h-full">
+            <div className="relative bg-white p-6 sm:p-8 rounded-2xl border-2 border-black transform-gpu flex flex-col h-full">
               <div className="relative">
                 <div className="w-16 h-16 bg-gradient-to-br from-[#9399f4] to-[#ff5ec4] rounded-xl flex items-center justify-center mb-6 border-2 border-black transition-all duration-300 ease-out flex-shrink-0">
                   <Gift className="h-8 w-8 text-white" />

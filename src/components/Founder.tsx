@@ -79,7 +79,7 @@ const Founder = () => {
 
                 <p className="font-bold">Download our 2026 Workshop Brochure</p>
               </div>
-
+              <div className="inline-block relative align-middle ml-2 text-black md:text-[#ff5ec4] text-2xl md:text-4xl opacity-30" style={{ top: '12px' }}><Quote /></div>
               <footer className="mt-8">
                 <div className="mt-6 flex items-center">
                   <div>
