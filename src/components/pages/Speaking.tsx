@@ -81,23 +81,26 @@ const Speaking = () => {
                 KATELIN O'SHEA
               </h2>
               <h3 className="text-3xl md:text-4xl font-black text-[#ff5ec4] mb-8">
-                Helping AI Make Sense for Your Audience
+                Bringing Strategic Clarity to AI Adoption
               </h3>
               <div className="text-xl md:text-2xl text-gray-600 space-y-8">
                 <p>
-                  I started exploring AI back in 2021 (yes, before ChatGPT was everywhere!) because I saw something exciting: tools that
-                  could give businesses back valuable time to focus on what really matters.
+                 I started exploring AI back in 2021 because I saw something most people missed: the gap between AI's promise and practical reality for non-technical business owners.
                 </p>
                 
                 <p>
-                  I combine real business experience with practical AI knowledge, delivering clear explanations and live demonstrations that
-                  show exactly how AI can work in your organisation or for the particular audience. No theory, just real solutions that work.
+                  I combine 10+ years of operations expertise with 4+ years of hands-on AI experimentation, delivering strategic frameworks that cut through the never ending hype. My approach is grounded in systems thinking - working backward from your end goal to identify where AI actually creates value.
                 </p>
                 
                 <p>
-                  My talks cut through the complexity of AI, focusing on implementation strategies that your audience can actually use. I
-                  bring a 'get things done' approach - because at the end of the day, it's about making AI work for your business, not just
-                  talking about it.
+                  My talks focus on:
+                  <ul className="list-disc list-inside mt-4 space-y-2">
+                   <li><strong>Risk vs Impact Assessment: </strong> Choosing the right first AI pilots</li>
+                   <li><strong>Time Thieves methodology: </strong>Identifying where teams lose hours every week</li>
+                   <li><strong>Expectation calibration: </strong>What AI can and can't reliably do today</li>
+                   <li><strong>Change leadership: </strong>Getting teams on board without the fear</li>
+                   <div>No theory, no jargon - just clear strategic direction your audience can actually apply.</div>
+                    </ul>
                 </p>
               </div>
 
@@ -108,21 +111,21 @@ const Speaking = () => {
                 <ul className="space-y-6 text-xl md:text-2xl text-gray-600">
                   <li className="flex items-center">
                     <span className="mr-4 text-[#ff5ec4] text-3xl">•</span>
-                    Needs clarity on AI implementation
+                   Needs direction on where to start with AI
                   </li>
                   <li className="flex items-center">
                     <span className="mr-4 text-[#ff5ec4] text-3xl">•</span>
-                    Wants practical solutions, not theory
+                    Wants frameworks, not hype
                   </li>
                   <li className="flex items-center">
                     <span className="mr-4 text-[#ff5ec4] text-3xl">•</span>
-                    Is ready to take action
+                    Is facing pressure to adopt but doesn't know how
                   </li>
                 </ul>
               </div>
 
               <p className="mt-12 text-xl md:text-2xl text-gray-600">
-                Let's discuss how we can bring practical AI insights to your next event.
+                Let's discuss how I can bring strategic AI clarity to your next event.
               </p>
 
               <div className="flex">

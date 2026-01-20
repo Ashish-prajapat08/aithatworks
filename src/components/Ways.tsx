@@ -207,7 +207,8 @@ const Ways = () => {
               
               <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 leading-relaxed">AI Consulting</h3>
               <div className="text-sm sm:text-base text-gray-600 mb-12 leading-relaxed">
-                Personalised AI implementation support for business owners and teams. Get unstuck fast with hands-on AI automation and implementation guidance.
+             Strategic AI planning for business owners who need clarity, not complexity. I assess where you're losing time, identify the right first moves, and create a practical roadmap that shows you exactly where to start and what to avoid.
+                {/* Personalised AI implementation support for business owners and teams. Get unstuck fast with hands-on AI automation and implementation guidance. */}
               </div>
               
               <div className="group/btn relative mt-auto">

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ChevronDown } from 'lucide-react';
 import { useNavigate, useLocation, Link } from 'react-router-dom';
+import { a, div } from 'framer-motion/client';
 
 const FAQItem = ({ question, answer, isOpen, onClick, onContactClick }: {
   question: string;
@@ -58,32 +59,36 @@ const FAQ = () => {
     
     {
       question: "Which program is right for me?",
-      answer: "If you want to power up your whole team, our Workshops are perfect. For personal learning, start with our Gen AI Kickstart Course. Not sure? Reach out via our contact page and I'll help you figure out the best path for your needs."
+      answer: (
+        <div>
+          <p className="mb-4"> <strong>Need strategic direction?</strong> Start with the AI Audit & Roadmap. I'll assess where you're losing time, identify the right first moves, and build you a personalised roadmap.</p>
+          <p className='mb-4'> <strong>Want to train your team?</strong> Customisable workshops (half-day or full-day) covering everything from Whats AI? to AI strategy and workflow automation.</p>
+          <p className='mb-4'><strong>Ready for long-term support?</strong> The Transformation Journey is a multi-month partnership where your team learns, applies, and builds AI capability with ongoing guidance.</p>
+          <p className='mb-4'> <strong>Looking for individual learning?</strong> I'm developing cohort-style courses on these same topics. Join the newsletter to be notified when they launch.</p>
+          <p className='mb-4'><strong>Not sure?</strong> Reach out and I'll help you figure out the best starting point.</p>
+          </div>
+      )
     },
     {
       question: "How much time do I need to commit?",
-      answer: "Our Gen AI Kickstart Course is completely flexible - learn at whatever pace works for you. Some people zoom through in a few weeks, others take their time. For team training, we'll work around your schedule, whether that's intensive sessions or spread out over time."
-    },
+answer: (
+        <div>
+          <p className="mb-4"> <strong>AI Audit & Roadmap:</strong> 4-6 weeks from kickoff to delivery (includes interviews and roadmap creation).</p>
+          <p className="mb-4"> <strong>Workshops:</strong> Half-day or full-day sessions, scheduled to fit your team's availability.</p>
+          <p className="mb-4"> <strong>Transformation Journey:</strong> Multi-month partnership with sessions spread out so your team has time to apply what they learn between sessions.</p>
+          <p className="mb-4"> <strong>Cohort courses:</strong> Timing flexible - details shared when they launch.</p>
+        </div>
+)    },
     {
       question: "What's the investment?",
       answer: (
-        <div className="text-sm sm:text-base leading-relaxed text-gray-600">
-          <p className="m-0">We've made AI training accessible for everyone:</p>
-          <ul className="mt-2 space-y-1 list-none m-0">
-            <li className="m-0">• Gen AI Kickstart Course: €34.99/month</li>
-            <li className="m-0">• Team Workshops: Starting from €1600 per day</li>
-            <li className="m-0">
-              • Custom Programs: Let's chat about your needs – reach out at our{" "}
-              <button
-                onClick={handleContactClick}
-                className="inline text-[#3843d0] hover:underline focus:outline-none m-0 p-0"
-              >
-                contact us page
-              </button>.
-            </li>
-          </ul>
-        </div>
-      ),
+        <div>
+          <p className="mb-4"><strong>AI Audit & Roadmap:</strong> to be determined on a case by case basis. </p>
+          <p className='mb-4'><strong>Workshops:</strong> Half-day €1,200 | Full-day €2,200</p>
+        <p className='mb-4'><strong>Transformation Journey:</strong> Custom pricing based on scope and timeline - let's chat about your needs.</p>
+        <p className='mb-4'><strong>Cohort courses:</strong> Pricing announced when they launch.</p>
+         </div>
+      )
     },
     {
       question: "Do I need to buy expensive AI tools?",
@@ -95,7 +100,7 @@ const FAQ = () => {
     },
     {
       question: "Which industries do you work with?",
-      answer: "From education and research, to ecommerce and logistics - and plenty in between! The best part? Because we're all at the start of the AI revolution, these core skills work across every industry. No matter your sector, you'll learn exactly how to make AI deliver real results for you and your business!"
+      answer: "I work with SMBs across industries - education, pharmaceuticals, medical, e-commerce, logistics, professional services, and more. My frameworks focus on operational problems (like time thieves and workflow inefficiencies) that show up everywhere, regardless of sector. If you're losing time to repetitive tasks or unclear processes, the methodology applies to you."
     },
     {
       question: "What's the difference between Workshops, Cohort Courses, and 1-to-1 Consulting?",
@@ -109,24 +114,41 @@ const FAQ = () => {
         </div>
       )
     },
+    {
+      question:"What's the difference between your services?",
+      answer: (
+        <div> 
+          <p className='mb-4'><strong>AI Consulting:</strong>Strategic assessment of where you're losing time, with a personalised roadmap showing where to start and what to avoid.</p>
+          <p className='mb-4'> <strong>Workshops:</strong>Half-day or full-day training sessions tailored to your team's specific needs and challenges.</p>
+          <p className='mb-4'><strong>Transformation Journey: </strong>Multi-month partnership with ongoing support as your team learns and applies AI in practice.</p>
+          <p className='mb-4'><strong>Cohort Courses:</strong>(Coming soon) Live group training on specific AI topics. Join the newsletter for updates.</p>
+        </div>
+      ) },
      {
       question: "What courses do you offer?",
-      answer: "We run specialised cohort courses throughout the year on topics like AI content operations, workflow automation, and AI implementation strategy. Each course is live, interactive, and limited to small groups. Join our newsletter to be notified when enrollment opens."
-    },
-    {
-      question: "How do I know which option is right for me?",
       answer: (
         <div>
-          <p className="mb-2"><strong>Choose Free Tools if:</strong> You're just getting started and want to explore AI on your own.</p>
-          
-          <p className="mb-2"><strong>Choose a Cohort Course if:</strong> You want structured learning on a specific topic alongside other professionals. <em>(Join our newsletter for updates)</em></p>
-          
-          <p className="mb-2"><strong>Choose 1-to-1 Consulting if:</strong> You're a solo business owner who needs personalised guidance.</p>
-          
-          <p><strong>Choose a Workshop if:</strong> You have a team that needs tailored AI training for your specific business processes.</p>
+          <p className='mb-4'><strong>For business teams: </strong>Bespoke workshops (half-day or full-day) on topics like AI strategy, governance, workflow automation, and Claude Skills & Projects. Sessions are fully interactive and tailored to your team's specific needs. If you have a particular challenge or skill gap, I can build a bespoke session for it. Get in touch to discuss what would work for your team.</p>
+
+          <p className='mb-4'><strong>For individuals: </strong>I'm developing cohort-style courses on the same topics which will be run throughout the year in a bootcamp style format online, covering - AI strategy, content operations, workflow automation, Claude Skills & Projects.These will be live, interactive, and focused on practical application. Join the newsletter to be notified when enrollment opens.</p>
         </div>
       )
-    }
+    },
+
+    // {
+    //   question: "How do I know which option is right for me?",
+    //   answer: (
+    //     <div>
+    //       <p className="mb-2"><strong>Choose Free Tools if:</strong> You're just getting started and want to explore AI on your own.</p>
+          
+    //       <p className="mb-2"><strong>Choose a Cohort Course if:</strong> You want structured learning on a specific topic alongside other professionals. <em>(Join our newsletter for updates)</em></p>
+          
+    //       <p className="mb-2"><strong>Choose 1-to-1 Consulting if:</strong> You're a solo business owner who needs personalised guidance.</p>
+          
+    //       <p><strong>Choose a Workshop if:</strong> You have a team that needs tailored AI training for your specific business processes.</p>
+    //     </div>
+    //   )
+    // }
   ];
 
   return (

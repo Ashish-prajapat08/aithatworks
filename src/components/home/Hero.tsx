@@ -200,7 +200,7 @@ const Hero = () => {
 
             <hr className="lg:hidden border-t-2 border-black p-0 m-0" />
 
-            <div className="mt-8 flex flex-col sm:flex-row space-y-6 sm:space-y-0 sm:space-x-6 justify-center">
+            <div className="mt-8 flex flex-col sm:flex-row space-y-6 sm:space-y-0 sm:space-x-6 lg:justify-start justify-center">
               {/* Get Free AI Tools CTA */}
               <div className="group/btn relative">
                 <div className="absolute inset-0 transition-all duration-300 ease-out">
@@ -215,9 +215,7 @@ const Hero = () => {
                 <Link
                   to="/free-tools"
                   className="relative inline-flex w-full items-center justify-center px-6 py-3 bg-[#ff5ec4] text-white hover:bg-[#ff4bb8] rounded-xl font-semibold transition-colors border-2 border-black transform-gpu group-hover/btn:-translate-x-3 group-hover/btn:-translate-y-3"
-                
                 >
-                  {/* relative inline-flex items-center px-6 py-3 bg-[#ff5ec4] text-white hover:bg-[#ff4bb8] rounded-xl font-semibold transition-colors border-2 border-black transform-gpu group-hover/btn:-translate-x-3 group-hover/btn:-translate-y-3" */}
                   Get Free AI Tools
                   <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover/btn:translate-x-1" />
                 </Link>
@@ -238,7 +236,6 @@ const Hero = () => {
                   to="/workshops"
                   className="relative inline-flex w-full items-center justify-center px-6 py-3 bg-white text-[#3843d0] hover:bg-[#3843d0] hover:text-white rounded-xl font-semibold transition-colors border-2 border-black transform-gpu group-hover/btn:-translate-x-3 group-hover/btn:-translate-y-3"
                 >
-                  {/* relative inline-flex items-center px-6 py-3 bg-white text-[#3843d0] hover:bg-[#3843d0] hover:text-white rounded-xl font-semibold transition-colors border-2 border-black transform-gpu group-hover/btn:-translate-x-3 group-hover/btn:-translate-y-3" */}
                   Book a Workshop for Your Team
                 </Link>
               </div>
