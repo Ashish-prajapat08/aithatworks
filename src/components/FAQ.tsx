@@ -24,7 +24,7 @@ const FAQItem = ({ question, answer, isOpen, onClick, onContactClick }: {
         />
       </button>
       {isOpen && (
-        <div className="bg-white rounded-xl mt-2 px-6 py-4 shadow-md">
+        <div className="bg-white rounded-xl mt-2 px-6 py-4 shadow-md faq-answer">
           <div className="text-gray-600 whitespace-pre-line">
             {answer}
           </div>
@@ -103,14 +103,16 @@ answer: (
       answer: "I work with SMBs across industries - education, pharmaceuticals, medical, e-commerce, logistics, professional services, and more. My frameworks focus on operational problems (like time thieves and workflow inefficiencies) that show up everywhere, regardless of sector. If you're losing time to repetitive tasks or unclear processes, the methodology applies to you."
     },
     {
-      question: "What's the difference between Workshops, Cohort Courses, and 1-to-1 Consulting?",
+      question: "What's the difference between AI Consulting, Workshops, and Cohort Courses?",
       answer: (
         <div>
-          <p className="mb-3"><strong>Workshops:</strong> Live, tailored training for your team (5-20 people). Bespoke to your business needs, delivered online with no external attendees.</p>
+          <p className="mb-4"><strong>AI Consulting: </strong> One-to-one interviews with your team to identify "Time Thieves" and operational inefficiencies. You get a personalised roadmap with quick wins and clear direction - not a generic report.</p>
           
-          <p className="mb-3"><strong>Cohort Courses:</strong> Live training on specific AI topics (like "AI Content Operations" or "AI Automation Sprint"). You'll learn alongside other professionals in small groups. Tickets sold separately throughout the year. <em>Join our newsletter to be first to know when enrolment opens.</em></p>
+          <p className="mb-4"><strong>Workshops: </strong> Live, bespoke training for your team. Half-day or full-day sessions, fully customisable to your business needs. Topics include AI strategy, foundational AI training, prompting skills, departmental deep-dives, and more.</p>
           
-          <p><strong>1-to-1 Consulting:</strong> Personalised support for solo entrepreneurs and small business owners. Get hands-on help implementing AI in your specific situation.</p>
+          <p className='mb-4'><strong>Transformation Journey: </strong> Multi-month partnership using our "Test and Learn" method. Your team applies training between sessions, and we troubleshoot what didn't work together in "Implementation Clinics." The goal: moving from "Using AI" to "Thinking AI-First."</p>
+
+          <p className='mb-4'><strong>Cohort Courses: </strong> (Coming soon) Live group training on specific AI topics. Purchase a ticket to join a scheduled cohort, learn alongside other professionals, and get access to recordings and helpful resources. Join our newsletter to be notified when enrollment opens.</p>
         </div>
       )
     },
@@ -118,10 +120,10 @@ answer: (
       question:"What's the difference between your services?",
       answer: (
         <div> 
-          <p className='mb-4'><strong>AI Consulting:</strong>Strategic assessment of where you're losing time, with a personalised roadmap showing where to start and what to avoid.</p>
-          <p className='mb-4'> <strong>Workshops:</strong>Half-day or full-day training sessions tailored to your team's specific needs and challenges.</p>
-          <p className='mb-4'><strong>Transformation Journey: </strong>Multi-month partnership with ongoing support as your team learns and applies AI in practice.</p>
-          <p className='mb-4'><strong>Cohort Courses:</strong>(Coming soon) Live group training on specific AI topics. Join the newsletter for updates.</p>
+          <p className='mb-4'><strong>AI Consulting:</strong> Strategic assessment of where you're losing time, with a personalised roadmap showing where to start and what to avoid.</p>
+          <p className='mb-4'> <strong>Workshops:</strong> Half-day or full-day training sessions tailored to your team's specific needs and challenges.</p>
+          <p className='mb-4'><strong>Transformation Journey: </strong> Multi-month partnership with ongoing support as your team learns and applies AI in practice.</p>
+          <p className='mb-4'><strong>Cohort Courses:</strong> (Coming soon) Live group training on specific AI topics. <em>Join the newsletter for updates.</em></p>
         </div>
       ) },
      {

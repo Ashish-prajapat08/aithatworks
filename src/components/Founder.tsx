@@ -57,16 +57,12 @@ const Founder = () => {
               </div>
 
               <div className="text-base leading-relaxed space-y-3 font-normal text-justify">
-                <p className="font-bold">
-                  I've been experimenting with AI since 2021,long before ChatGPT
-                  became a household name.
-                </p>
-
-                <p>
-                  It was through watching how even basic AI back then could
+               <p><span className="font-bold">
+                  I've been experimenting with AI since 2021, long before ChatGPT
+                  became a household name. 
+                </span> It was through watching how even basic AI back then could
                   solve real business problems with the right operations
-                  mindset; was the moment everything clicked for me.
-                </p>
+                  mindset; was the moment everything clicked for me.</p>
 
                 <p className="font-bold">
                   I realised AI wasn't just some new technology. It was instead

@@ -223,3 +223,24 @@
   font-family: 'Clash Grotesk', sans-serif;
   @apply font-bold;
 }
+
+
+/* FAQ answer text size control */
+.faq-answer p {
+  font-size: 1rem !important;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+/* Normal answer text (string) */
+.faq-answer {
+  font-size: 1rem !important;
+  color: #4b5563;
+}
+
+/* Bold text inside answers */
+.faq-answer strong,
+.faq-answer p strong {
+  font-family: 'Clash Grotesk', sans-serif;
+  font-weight: 700;
+}

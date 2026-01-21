@@ -105,20 +105,20 @@ const Speaking = () => {
               </div>
 
               <div className="mt-12">
-                <h3 className="text-3xl md:text-4xl font-black text-black mb-8">
+                <h3 className="text-3xl md:text-4xl font-black text-black mb-6">
                   PERFECT FOR EVENTS WHERE YOUR AUDIENCE:
                 </h3>
-                <ul className="space-y-6 text-xl md:text-2xl text-gray-600">
+                <ul className="space-y-3 text-xl md:text-2xl text-gray-600">
                   <li className="flex items-center">
-                    <span className="mr-4 text-[#ff5ec4] text-3xl">•</span>
+                    <span className="mr-4 text-[#ff5ec4] text-2xl">•</span>
                    Needs direction on where to start with AI
                   </li>
                   <li className="flex items-center">
-                    <span className="mr-4 text-[#ff5ec4] text-3xl">•</span>
+                    <span className="mr-4 text-[#ff5ec4] text-2xl">•</span>
                     Wants frameworks, not hype
                   </li>
                   <li className="flex items-center">
-                    <span className="mr-4 text-[#ff5ec4] text-3xl">•</span>
+                    <span className="mr-4 text-[#ff5ec4] text-2xl">•</span>
                     Is facing pressure to adopt but doesn't know how
                   </li>
                 </ul>
