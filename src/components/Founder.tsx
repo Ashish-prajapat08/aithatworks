@@ -57,12 +57,15 @@ const Founder = () => {
               </div>
 
               <div className="text-base leading-relaxed space-y-3 font-normal text-justify">
-               <p><span className="font-bold">
-                  I've been experimenting with AI since 2021, long before ChatGPT
-                  became a household name. 
-                </span> It was through watching how even basic AI back then could
+                <p>
+                  <span className="font-bold">
+                    I've been experimenting with AI since 2021, long before
+                    ChatGPT became a household name.
+                  </span>{" "}
+                  It was through watching how even basic AI back then could
                   solve real business problems with the right operations
-                  mindset; was the moment everything clicked for me.</p>
+                  mindset; was the moment everything clicked for me.
+                </p>
 
                 <p className="font-bold">
                   I realised AI wasn't just some new technology. It was instead
@@ -152,9 +155,12 @@ const Founder = () => {
                   believe in transparency - you should know what you're
                   considering before we ever get on a call.
                 </p>
-               <p>
+                <p className="relative pr-10">
                   If what you see resonates, then let's have a conversation
-                  about your specific situation.<div className="inline-block relative align-middle ml-2 text-black md:text-[#ff5ec4] text-2xl md:text-4xl opacity-30" style={{ top: '12px' }}><Quote /></div>
+                  about your specific situation.
+                  <span className="absolute right-0 top-1/2 -translate-y-1/2 text-black md:text-[#ff5ec4] text-2xl md:text-4xl opacity-30">
+                    <Quote />
+                  </span>
                 </p>
                 <div className="flex items-center justify-center lg:justify-start space-x-2 py-5">
                   <button
