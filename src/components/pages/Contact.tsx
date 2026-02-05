@@ -1,19 +1,19 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { ArrowLeft, Mail, Clock } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { ArrowLeft, Mail, Clock } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Contact = () => {
-  const [firstName, setFirstName] = useState('');
-  const [lastName, setLastName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
-  const [statusMessage, setStatusMessage] = useState('');
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [statusMessage, setStatusMessage] = useState("");
   const [isSuccess, setIsSuccess] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setStatusMessage(''); // Reset message on form submit
+    setStatusMessage(""); // Reset message on form submit
 
     const data = {
       firstName,
@@ -23,33 +23,38 @@ const Contact = () => {
     };
 
     try {
-      const res = await fetch('https://hook.eu2.make.com/v7jmnnmkm1whn2d1xssptuf6vt2rqsxy', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
+      const res = await fetch(
+        "https://hook.eu2.make.com/v7jmnnmkm1whn2d1xssptuf6vt2rqsxy",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
         },
-        body: JSON.stringify(data),
-      });
+      );
 
       if (res.ok) {
-        setStatusMessage('Your message has been sent successfully!');
+        setStatusMessage("Your message has been sent successfully!");
         setIsSuccess(true);
         // Clear form fields on success
-        setFirstName('');
-        setLastName('');
-        setEmail('');
-        setMessage('');
+        setFirstName("");
+        setLastName("");
+        setEmail("");
+        setMessage("");
       } else {
-        setStatusMessage('Failed to send your message. Please try again later.');
+        setStatusMessage(
+          "Failed to send your message. Please try again later.",
+        );
         setIsSuccess(false);
       }
     } catch (err) {
-      console.error('Submit error:', err);
-      setStatusMessage('An error occurred. Please try again.');
+      console.error("Submit error:", err);
+      setStatusMessage("An error occurred. Please try again.");
       setIsSuccess(false);
     }
   };
-  
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#faf9ff] to-white pt-32 pb-24 relative overflow-hidden">
       {/* Background decorative elements */}
@@ -87,7 +92,7 @@ const Contact = () => {
               <Mail className="h-8 w-8 text-[#3843d0]" />
             </div>
 
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 mb-8"> 
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 mb-8">
               {/* text-3xl font-black text-black sm:text-4xl md:text-5xl font-heading */}
               GET IN TOUCH
             </h1>
@@ -96,29 +101,34 @@ const Contact = () => {
               <div>
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">Email</h2>
                 <p className="text-xl text-gray-600">
-                  For Bookings and enquiries:{' '}
-                  <a 
-                    href="mailto:contactus@aithatworks.io"
+                  For Bookings and enquiries:{" "}
+                  <a
+                    href="mailto:katelin@aithatworks.io"
                     className="text-[#3843d0] hover:underline"
                   >
-                    contactus@aithatworks.io
-                  </a> 
+                    katelin@aithatworks.io
+                  </a>
                 </p>
               </div>
 
               <div>
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">Hours of operation</h2>
+                <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                  Hours of operation
+                </h2>
                 <div className="flex items-start space-x-3">
                   <Clock className="h-6 w-6 text-[#3843d0] mt-1" />
                   <p className="text-xl text-gray-600">
-                    Monday - Friday<br />
+                    Monday - Friday
+                    <br />
                     9:00 A.M. to 5:00 P.M.
                   </p>
                 </div>
               </div>
 
               <div>
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">What happens next?</h2>
+                <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                  What happens next?
+                </h2>
                 <ol className="space-y-4 text-xl text-gray-600">
                   <li className="flex items-start">
                     <span className="mr-4 font-bold">1.</span>
@@ -126,7 +136,8 @@ const Contact = () => {
                   </li>
                   <li className="flex items-start">
                     <span className="mr-4 font-bold">2.</span>
-                    We'll reach out to schedule a brief call to understand your needs
+                    We'll reach out to schedule a brief call to understand your
+                    needs
                   </li>
                   <li className="flex items-start">
                     <span className="mr-4 font-bold">3.</span>
@@ -149,89 +160,100 @@ const Contact = () => {
             </h2>
 
             <form onSubmit={handleSubmit} className="space-y-6">
-  <div className="grid grid-cols-2 gap-4">
-    {/* First Name */}
-    <div>
-      <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-1">
-        First Name
-      </label>
-      <input
-        type="text"
-        id="firstName"
-        value={firstName}
-        onChange={(e) => setFirstName(e.target.value)}
-        className="w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-[#3843d0] focus:ring-2 focus:ring-[#3843d0]/20 outline-none transition-colors"
-        required
-      />
-    </div>
+              <div className="grid grid-cols-2 gap-4">
+                {/* First Name */}
+                <div>
+                  <label
+                    htmlFor="firstName"
+                    className="block text-sm font-medium text-gray-700 mb-1"
+                  >
+                    First Name
+                  </label>
+                  <input
+                    type="text"
+                    id="firstName"
+                    value={firstName}
+                    onChange={(e) => setFirstName(e.target.value)}
+                    className="w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-[#3843d0] focus:ring-2 focus:ring-[#3843d0]/20 outline-none transition-colors"
+                    required
+                  />
+                </div>
 
-    {/* Last Name */}
-    <div>
-      <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-1">
-        Last Name
-      </label>
-      <input
-        type="text"
-        id="lastName"
-        value={lastName}
-        onChange={(e) => setLastName(e.target.value)}
-        className="w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-[#3843d0] focus:ring-2 focus:ring-[#3843d0]/20 outline-none transition-colors"
-        required
-      />
-    </div>
-  </div>
+                {/* Last Name */}
+                <div>
+                  <label
+                    htmlFor="lastName"
+                    className="block text-sm font-medium text-gray-700 mb-1"
+                  >
+                    Last Name
+                  </label>
+                  <input
+                    type="text"
+                    id="lastName"
+                    value={lastName}
+                    onChange={(e) => setLastName(e.target.value)}
+                    className="w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-[#3843d0] focus:ring-2 focus:ring-[#3843d0]/20 outline-none transition-colors"
+                    required
+                  />
+                </div>
+              </div>
 
-  {/* Email */}
-  <div>
-    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-      Email Address
-    </label>
-    <input
-      type="email"
-      id="email"
-      value={email}
-      onChange={(e) => setEmail(e.target.value)}
-      className="w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-[#3843d0] focus:ring-2 focus:ring-[#3843d0]/20 outline-none transition-colors"
-      required
-    />
-  </div>
+              {/* Email */}
+              <div>
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-medium text-gray-700 mb-1"
+                >
+                  Email Address
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  className="w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-[#3843d0] focus:ring-2 focus:ring-[#3843d0]/20 outline-none transition-colors"
+                  required
+                />
+              </div>
 
-  {/* Message */}
-  <div>
-    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
-      Your Message
-    </label>
-    <textarea
-      id="message"
-      rows={6}
-      value={message}
-      onChange={(e) => setMessage(e.target.value)}
-      className="w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-[#3843d0] focus:ring-2 focus:ring-[#3843d0]/20 outline-none transition-colors resize-none"
-      required
-    />
-  </div>
+              {/* Message */}
+              <div>
+                <label
+                  htmlFor="message"
+                  className="block text-sm font-medium text-gray-700 mb-1"
+                >
+                  Your Message
+                </label>
+                <textarea
+                  id="message"
+                  rows={6}
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
+                  className="w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-[#3843d0] focus:ring-2 focus:ring-[#3843d0]/20 outline-none transition-colors resize-none"
+                  required
+                />
+              </div>
 
-  {/* Status Message */}
-  <div className="text-center">
-    {statusMessage && (
-      <p
-        className={`mt-4 px-4 py-2 rounded-lg text-white ${
-          isSuccess ? 'bg-green-500' : 'bg-red-500'
-        }`}
-      >
-        {statusMessage}
-      </p>
-    )}
-  </div>
+              {/* Status Message */}
+              <div className="text-center">
+                {statusMessage && (
+                  <p
+                    className={`mt-4 px-4 py-2 rounded-lg text-white ${
+                      isSuccess ? "bg-green-500" : "bg-red-500"
+                    }`}
+                  >
+                    {statusMessage}
+                  </p>
+                )}
+              </div>
 
-  <button
-    type="submit"
-    className="w-full bg-[#3843d0] text-white px-6 py-4 rounded-lg font-semibold hover:bg-[#2d35a8] transition-colors flex items-center justify-center group border-2 border-black"
-  >
-    Send Message
-  </button>
-</form>
-
+              <button
+                type="submit"
+                className="w-full bg-[#3843d0] text-white px-6 py-4 rounded-lg font-semibold hover:bg-[#2d35a8] transition-colors flex items-center justify-center group border-2 border-black"
+              >
+                Send Message
+              </button>
+            </form>
           </motion.div>
         </div>
       </div>

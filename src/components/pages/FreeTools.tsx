@@ -198,11 +198,11 @@ const levenshtein = (a: string, b: string): number => {
           className="text-center mb-12"
         >
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 mb-6">
-            FREE AI TOOLS TO GET YOU STARTED
+            STOP WRESTLING WITH AI.
           </h1>
+          <h1 className='text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 mb-6'> START USING IT PROPERLY.</h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Practical templates, workflows, and guides you can use today. No fluff, no jargon - just AI that actually works.
-          </p>
+           I've spent three and a half years testing Al tools and building workflows that actually work. Here's 300+ prompts, templates, and frameworks that I've created and learned ready for you to use today.</p>
         </motion.div>
 
         {/* Resource Preview Section - Locked */}
@@ -305,17 +305,20 @@ const levenshtein = (a: string, b: string): number => {
     </div> */}
   </div>
 ))}
-  </div>
+  </div> 
   
 
   {/* Optional: Add a centered message */}
   <div className="text-center mt-8">
     <p className="text-xl font-bold text-gray-900 mb-2">
-      🔒 Enter your email below to unlock all resources
+      🔒 Enter your email to unlock the 300+ resources, new additions added weekly
+      {/* 🔒 Enter your email below to unlock all resources */}
     </p>
     <p className="text-gray-600">
-      Join business owners already using these tools to save 8+ hours per week
+      {/* Join business owners already using these tools to save 8+ hours per week */}
+      Join many business owners already using these tools to save a minimum of 8 hours per week!
     </p>
+    <p className='text-gray-600'>Plus you can unsubscribe any time.</p>
   </div>
 </motion.div>
         {/* Newsletter Signup Form */}
