@@ -220,7 +220,7 @@ const ToolkitWelcome = () => {
   }, [navigate]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#faf9ff] to-white pt-20 pb-24 relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-b from-[#faf9ff] to-white pt-32 pb-24 relative overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-r from-indigo-500/20 to-purple-500/20 rounded-full blur-3xl" />
@@ -249,7 +249,7 @@ const ToolkitWelcome = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-20"
+          className="text-center mb-20 "
         >
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 mb-6 leading-tight">
             You just unlocked<br />
@@ -416,111 +416,6 @@ const ToolkitWelcome = () => {
           </div>
         </motion.div>
       </div>
-
-      {/* SECTION 6: FOOTER */}
-      <footer className="bg-gray-900 text-white mt-32 relative">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <div className="grid md:grid-cols-4 gap-12 mb-12">
-            {/* Brand Column */}
-            <div>
-              <div className="mb-4">
-                <h3 className="text-2xl font-black">
-                  <span className="text-[#3843d0]">AI</span> THAT WORKS 💡
-                </h3>
-              </div>
-              <p className="text-gray-400 text-sm leading-relaxed">
-                Stop wondering about AI.
-                <br />
-                Start making it work for you.
-              </p>
-            </div>
-
-            {/* Quick Links */}
-            <div>
-              <h4 className="text-lg font-black mb-6">Quick Links</h4>
-              <ul className="space-y-3">
-                <li>
-                  <Link to="/free-tools" className="text-gray-400 hover:text-white transition-colors">
-                    Free Tools
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/workshops" className="text-gray-400 hover:text-white transition-colors">
-                    Workshops
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/contact" className="text-gray-400 hover:text-white transition-colors">
-                    AI Consulting
-                  </Link>
-                </li>
-                <li>
-                  <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                    Speaking
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                    About Us
-                  </a>
-                </li>
-                <li>
-                  <Link to="/contact" className="text-gray-400 hover:text-white transition-colors">
-                    Contact Us
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            {/* Connect Column */}
-            <div>
-              <h4 className="text-lg font-black mb-6">Connect With Us</h4>
-              <ul className="space-y-3">
-                <li>
-                  <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                    Newsletter
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="inline-flex items-center text-gray-400 hover:text-white transition-colors">
-                    <Linkedin className="h-4 w-4 mr-2" />
-                    LinkedIn
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            {/* Policies Column */}
-            <div>
-              <h4 className="text-lg font-black mb-6">Policies</h4>
-              <ul className="space-y-3">
-                <li>
-                  <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                    Privacy Policy
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                    Cookie Policy
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                    Terms & Conditions
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          {/* Footer Bottom */}
-          <div className="border-t border-gray-800 pt-8 text-center">
-            <p className="text-gray-500 text-sm">
-              AI That Works Ltd. Copyright © 2025
-            </p>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 };
