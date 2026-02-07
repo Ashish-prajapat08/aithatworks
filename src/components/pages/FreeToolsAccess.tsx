@@ -358,7 +358,7 @@ const ToolkitWelcome = () => {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="mb-20"
         >
-          <h2 className="text-3xl md:text-4xl font-black text-gray-900 text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-black text-gray-900 text-center mb-4">
             What's Next?
           </h2>
 
@@ -377,7 +377,7 @@ const ToolkitWelcome = () => {
 
             {/* Community section with border */}
             <div className="border-t-2 border-gray-300 border-b-2 py-8 my-8">
-              <h3 className="text-3xl md:text-4xl font-black text-gray-900 text-center mb-12">
+              <h3 className="text-3xl md:text-4xl font-black text-gray-900 text-center mb-4">
                 I'm also building something bigger.
               </h3>
               <p className="text-lg text-gray-600 leading-relaxed mb-4">
