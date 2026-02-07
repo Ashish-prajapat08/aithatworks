@@ -331,7 +331,7 @@ const ToolkitWelcome = () => {
                 Business Launch Frameworks
               </h3>
               <p className="text-gray-600 leading-relaxed">
-                900+ business ideas across professional services, e-commerce, and digital products. Each includes AI tools, investment levels, and starter prompts.
+                300+ business ideas across professional services, e-commerce, and digital products. Each includes AI tools, investment levels, and starter prompts.
               </p>
             </div>
 
@@ -346,9 +346,9 @@ const ToolkitWelcome = () => {
             </div>
           </div>
 
-          <p className="text-center text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          {/* <p className="text-center text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
             I've spent 3.5 years testing AI tools and documenting what actually delivers results. This is everything I've learned, organised so you can skip the trial and error.
-          </p>
+          </p> */}
         </motion.div>
 
         {/* SECTION 4: WHAT'S NEXT */}
@@ -364,8 +364,15 @@ const ToolkitWelcome = () => {
 
           <div className="space-y-8">
             {/* First paragraph */}
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            {/* <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
               You'll get an email from me bi-weekly with practical AI tips, new prompts, and real examples of what's working. No fluff. Just tools you can use immediately.
+            </p> */}
+
+            <p className="text-center text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              Every two weeks, I'll send you a newsletter with practical AI tips, new prompts and workflows I'm actually using, and AI news without the hype.
+            </p>
+            <p className='text-center text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed'>
+              No extra fluff. Just tips, tools and workflows that get results in minutes.
             </p>
 
             {/* Community section with border */}

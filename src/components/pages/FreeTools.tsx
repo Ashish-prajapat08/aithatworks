@@ -467,10 +467,10 @@ const levenshtein = (a: string, b: string): number => {
     )}
   </button>
 </div>
-              <p className="text-center text-sm text-gray-500">
+              {/* <p className="text-center text-sm text-gray-500">
                 Join many other business owners learning to create AI That Works, 
-              </p>
-              <p className="text-center text-sm text-gray-500"> one tool at a time!</p>
+              </p> */}
+              {/* <p className="text-center text-sm text-gray-500"> one tool at a time!</p> */}
             </form>
           </div>
         </motion.div>
