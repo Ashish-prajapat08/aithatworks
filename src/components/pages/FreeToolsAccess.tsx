@@ -249,7 +249,7 @@ const ToolkitWelcome = () => {
           </h1>
 
           <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            900+ AI prompts and workflows for building your business. Content
+            300+ AI prompts and workflows for building your business. Content
             strategies. Competitive research frameworks. Automation templates.
             Business validation tools.
           </p>
